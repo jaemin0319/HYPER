@@ -1,0 +1,44 @@
+{
+ "_comment": [
+  "Copy to hardware.json and fill in for your wiring. Values marked TODO must be measured on the robot.",
+  "Joint angle = direction * motor output angle + offset. The calf motor sits on the thigh and drives the knee",
+  "through a 1:1 belt, so the calf uses the same formula. offset comes from deploy/scripts/calibrate.py.",
+  "One RS-485 bus per leg (port), motor ids 0 hip, 1 thigh, 2 calf; change freely, ids are per bus."
+ ],
+ "motor_type": "GO_M8010_6",
+ "io_hz": 500,
+ "joints": {
+  "FL_hip_joint":   {"port": "/dev/ttyUSB0", "id": 0, "direction": 1, "offset": 0.0},
+  "FL_thigh_joint": {"port": "/dev/ttyUSB0", "id": 1, "direction": 1, "offset": 0.0},
+  "FL_calf_joint":  {"port": "/dev/ttyUSB0", "id": 2, "direction": 1, "offset": 0.0},
+  "FR_hip_joint":   {"port": "/dev/ttyUSB1", "id": 0, "direction": 1, "offset": 0.0},
+  "FR_thigh_joint": {"port": "/dev/ttyUSB1", "id": 1, "direction": 1, "offset": 0.0},
+  "FR_calf_joint":  {"port": "/dev/ttyUSB1", "id": 2, "direction": 1, "offset": 0.0},
+  "RL_hip_joint":   {"port": "/dev/ttyUSB2", "id": 0, "direction": 1, "offset": 0.0},
+  "RL_thigh_joint": {"port": "/dev/ttyUSB2", "id": 1, "direction": 1, "offset": 0.0},
+  "RL_calf_joint":  {"port": "/dev/ttyUSB2", "id": 2, "direction": 1, "offset": 0.0},
+  "RR_hip_joint":   {"port": "/dev/ttyUSB3", "id": 0, "direction": 1, "offset": 0.0},
+  "RR_thigh_joint": {"port": "/dev/ttyUSB3", "id": 1, "direction": 1, "offset": 0.0},
+  "RR_calf_joint":  {"port": "/dev/ttyUSB3", "id": 2, "direction": 1, "offset": 0.0}
+ },
+ "calibration_pose": {
+  "_comment": "TODO: joint angles (rad) of a pose you can reproduce by hand or with a jig; calibrate.py sets offsets so the motors read these. Default = CAD assembly pose.",
+  "FL_hip_joint": 0.0, "FR_hip_joint": 0.0, "RL_hip_joint": 0.0712, "RR_hip_joint": -0.0712,
+  "FL_thigh_joint": 0.9442, "FR_thigh_joint": 0.9442, "RL_thigh_joint": 0.8206, "RR_thigh_joint": 0.8206,
+  "FL_calf_joint": -1.9148, "FR_calf_joint": -1.9148, "RL_calf_joint": -1.7686, "RR_calf_joint": -1.7686
+ },
+ "joystick": {
+  "device": "/dev/input/js0",
+  "axes": {"vx": [1, -1], "vy": [0, -1], "wz": [3, -1]},
+  "deadzone": 0.1,
+  "buttons": {"stand": 7, "walk": 0, "damp": 1},
+  "_comment": "Xbox-style pad on Linux: left stick y/x -> vx/vy, right stick x -> yaw rate; START stand, A walk, B damp. Check indices with jstest."
+ },
+ "safety": {
+  "max_temp_c": 80,
+  "comm_timeout_s": 0.1,
+  "damp_kd": 1.0,
+  "stand_seconds": 2.0,
+  "joint_limit_margin_rad": 0.1
+ }
+}

@@ -4,8 +4,9 @@ Inventor 조립품 `trunk-hip-thigh-calf-foot.iam`(왼쪽 앞·뒤 다리)에서
 
 - 링크 17개, 회전 관절 12개, 총 질량 **12.329 kg**
 - MuJoCo 3.17.0에서 로드·선 자세 검증 완료 (18/18)
-- Isaac Sim 5.1용 USD(`usd/hyper.usd`)와 검증 31/31: [`isaacsim/README.md`](isaacsim/README.md)
-- `isaaclab/hyper_cfg.py`는 생성만 했고 실행해 보지 않았습니다(Isaac Lab 학습 환경은 별도로 정리 중).
+- Isaac Sim 5.1용 USD와 검증 31/31: [`isaacsim/README.md`](isaacsim/README.md)
+- Isaac Lab 2.3 학습 환경(Go2 velocity 태스크를 HYPER 하드웨어에 맞춤)과 학습된 평지 정책(회전·발 들기가 약함, 실기 미검증): [`isaaclab/README.md`](isaaclab/README.md)
+- 모터 피드백만 쓰는 배포 제어 코드(sim2sim, GO-M8010-6 실기): [`deploy/README.md`](deploy/README.md)
 
 ![standing](mujoco/images/standing_iso.png)
 
@@ -18,7 +19,8 @@ Inventor 조립품 `trunk-hip-thigh-calf-foot.iam`(왼쪽 앞·뒤 다리)에서
 | `meshes/collision/*.stl` | 충돌용 메시. 같은 CAD를 부품 인스턴스별로 내보낸 것 (아래 '충돌' 참고) |
 | `mujoco/hyper_scene.xml`, `mujoco/view.py` | MuJoCo 장면(바닥, 자유 몸체, 모터, 키프레임)과 뷰어 |
 | `usd/`, `isaacsim/` | Isaac Sim 5.1용 USD(`usd/hyper.usd`, 장면 `usd/hyper_scene.usda`)와 변환·검증·뷰어 스크립트 |
-| `isaaclab/hyper_cfg.py` | unitree_rl_lab의 `UNITREE_GO2_CFG`를 옮긴 Isaac Lab 설정 |
+| `isaaclab/hyper_lab/`, `isaaclab/scripts/` | Isaac Lab 2.3 태스크(`Isaac-Velocity-Flat/Rough-HYPER-v0`), 학습·export·검증 스크립트 |
+| `deploy/` | 배포 제어 코드: 모터 엔코더 + 조이스틱만으로 정책 실행 (MuJoCo sim2sim, GO-M8010-6 실기) |
 | `properties/hyper_properties.json` | 링크별 물성치, CAD↔링크 좌표 변환, 부품 재질, 검사 결과 전체 |
 | `config/go2_reference.json` | Go2 USD와 설정 코드에서 추출한 값과 출처(파일 해시 포함) |
 | `validation/` | 충돌 근사와 실제 CAD 간섭 비교 결과 |
@@ -91,13 +93,14 @@ CAD 조립품(`trunk-hip-thigh-calf-foot.iam`) 좌표와의 관계: base x = CAD
 ## Go2에서 가져온 값
 
 - 관절 위치 한계: `Go2/usd/configuration/go2_description_physics.usd` (https://huggingface.co/datasets/unitreerobotics/unitree_model). USD의 float32 값을 유효숫자 6자리로 옮겼습니다(예: 60.0001° → 1.0472 rad).
-- Isaac Lab 설정: https://github.com/unitreerobotics/unitree_rl_lab @ `4960b84`의 `UNITREE_GO2_CFG` — 초기 자세(pos 0.4 m, hip ±0.1, 앞 thigh 0.8, 뒤 thigh 1.0, calf −1.5), GO2HV 액추에이터(stiffness 25, damping 0.5, friction 0.01, 토크-속도 곡선 X1 13.5, X2 30, Y1 20.2, Y2 23.4), soft_joint_pos_limit_factor 0.9, self collision 사용. 이 파일은 아직 Go2HV 액추에이터 값을 그대로 쓰므로 GO-M8010-6 값과 다릅니다.
+- Isaac Lab 설정: Isaac Lab 2.3 `isaaclab_assets`의 `UNITREE_GO2_CFG`와 Go2 velocity 태스크를 그대로 상속합니다. 초기 자세(pos 0.4 m, hip ±0.1, 앞 thigh 0.8, 뒤 thigh 1.0, calf −1.5), `DCMotorCfg`(stiffness 25, damping 0.5, friction 0)는 Go2와 같고 토크·속도만 GO-M8010-6 값(23.7 N·m, 30 rad/s)입니다. 다른 점은 [`isaaclab/README.md`](isaaclab/README.md)에 정리했습니다.
 - USD에 joint friction, armature는 없습니다. Go2의 rotor 링크(모터 회전자 질량)는 넣지 않았습니다. HYPER는 모터 질량이 각 서브 조립품에 이미 들어 있습니다.
-- MuJoCo의 `view.py`는 같은 PD(25, 0.5)에 Isaac Lab `DCMotor` 토크-속도 제한(GO-M8010-6: 정지 23.7 N·m, 무부하 30 rad/s)을 Python으로 구현합니다.
+- MuJoCo의 `view.py`는 같은 PD와 Isaac Lab `DCMotor` 토크-속도 제한(GO-M8010-6)을 Python으로 구현합니다.
 
 ## 충돌
 
 - 모든 링크에 충돌 형상이 있고, 서로 다른 링크끼리 충돌합니다. MuJoCo와 Isaac Lab은 부모-자식(바로 붙은 두 링크) 사이 충돌을 계산하지 않으므로, 그 사이는 관절 한계가 막습니다.
+- Isaac Lab 학습도 자기충돌을 켭니다. Go2 설정은 끄지만, HYPER는 관절 범위 안에서 허벅지가 몸체에 닿기 때문입니다. 끄고 학습한 정책은 앞 허벅지가 몸체를 통과한 자세로 걸었고, MuJoCo sim2sim에서 그대로 드러났습니다([`isaaclab/README.md`](isaaclab/README.md)).
 - 시뮬레이터는 메시를 볼록 껍질로 충돌시킵니다. 링크 메시 하나를 통째로 쓰면 부품 사이 빈 공간까지 막혀서(앞 허벅지가 서 있기만 해도 몸체에 3.5 mm 파고듦) CAD를 부품 인스턴스별로 내보내 부품마다 충돌 메시를 두었습니다. 발 공은 반지름 25 mm 구로 처리합니다.
 
 실제 CAD 간섭(Inventor)과 MuJoCo 볼록 껍질 접촉 비교 (나머지 관절은 초기 자세):
