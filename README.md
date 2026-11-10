@@ -1,9 +1,11 @@
 # HYPER v1 사족보행 URDF
 
-Inventor 조립품 `trunk-hip-thigh-calf-foot.iam`(왼쪽 앞·뒤 다리)에서 질량 특성과 관절 위치를 추출해 만든 URDF입니다. 오른쪽 다리는 왼쪽 다리를 몸체 좌우 대칭면에 대해 미러링했습니다. 좌표 규약, 링크·조인트 이름, 관절 한계·토크·속도는 Unitree Go2(Isaac Lab용 USD)를 그대로 따릅니다.
+Inventor 조립품 `trunk-hip-thigh-calf-foot.iam`(왼쪽 앞·뒤 다리)에서 질량 특성과 관절 위치를 추출해 만든 URDF입니다. 오른쪽 다리는 왼쪽 다리를 몸체 좌우 대칭면에 대해 미러링했습니다. 좌표 규약, 링크·조인트 이름, 관절 위치 한계는 Unitree Go2(Isaac Lab용 USD)를 따르고, 토크·속도는 실제 모터 Unitree GO-M8010-6 값입니다.
 
 - 링크 17개, 회전 관절 12개, 총 질량 **12.329 kg**
-- MuJoCo 3.17.0에서 로드·선 자세 검증 완료 (18/18). Isaac Lab 설정은 생성만 했고 실행해 보지 않았습니다.
+- MuJoCo 3.17.0에서 로드·선 자세 검증 완료 (18/18)
+- Isaac Sim 5.1용 USD(`usd/hyper.usd`)와 검증 31/31: [`isaacsim/README.md`](isaacsim/README.md)
+- `isaaclab/hyper_cfg.py`는 생성만 했고 실행해 보지 않았습니다(Isaac Lab 학습 환경은 별도로 정리 중).
 
 ![standing](mujoco/images/standing_iso.png)
 
@@ -12,9 +14,10 @@ Inventor 조립품 `trunk-hip-thigh-calf-foot.iam`(왼쪽 앞·뒤 다리)에서
 | 경로 | 내용 |
 | --- | --- |
 | `urdf/hyper.urdf` | 로봇 모델 |
-| `meshes/*.stl` | 화면용 메시. `trunk/hip/thigh/calf-foot.stl`은 제공된 STL 원본 그대로, `*_mirror.stl`은 오른쪽 다리용 y 반전본 |
+| `meshes/*.stl` | 화면용 메시. `trunk/hip/thigh/calf_foot.stl`은 제공된 STL 원본 그대로(`calf-foot.stl`은 USD 이름 규칙 때문에 이름만 `calf_foot.stl`로 바꿈), `*_mirror.stl`은 오른쪽 다리용 y 반전본 |
 | `meshes/collision/*.stl` | 충돌용 메시. 같은 CAD를 부품 인스턴스별로 내보낸 것 (아래 '충돌' 참고) |
 | `mujoco/hyper_scene.xml`, `mujoco/view.py` | MuJoCo 장면(바닥, 자유 몸체, 모터, 키프레임)과 뷰어 |
+| `usd/`, `isaacsim/` | Isaac Sim 5.1용 USD(`usd/hyper.usd`, 장면 `usd/hyper_scene.usda`)와 변환·검증·뷰어 스크립트 |
 | `isaaclab/hyper_cfg.py` | unitree_rl_lab의 `UNITREE_GO2_CFG`를 옮긴 Isaac Lab 설정 |
 | `properties/hyper_properties.json` | 링크별 물성치, CAD↔링크 좌표 변환, 부품 재질, 검사 결과 전체 |
 | `config/go2_reference.json` | Go2 USD와 설정 코드에서 추출한 값과 출처(파일 해시 포함) |
@@ -62,31 +65,35 @@ CAD 조립품(`trunk-hip-thigh-calf-foot.iam`) 좌표와의 관계: base x = CAD
 
 | 관절 | 부모 기준 위치 m | 축 | 하한 | 상한 | effort N·m | velocity rad/s | CAD 자세 각도 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| FL_hip_joint | 0.2283, 0.0475, 0.0000 | 1 0 0 | -1.0472 | 1.0472 | 23.7 | 30.1 | 0.0000 |
-| FL_thigh_joint | 0.0000, 0.0958, 0.0000 | 0 1 0 | -1.5708 | 3.4907 | 23.7 | 30.1 | 0.9442 |
-| FL_calf_joint | 0.0000, 0.0000, -0.2000 | 0 1 0 | -2.7227 | -0.83776 | 45.43 | 15.7 | -1.9148 |
+| FL_hip_joint | 0.2283, 0.0475, 0.0000 | 1 0 0 | -1.0472 | 1.0472 | 23.7 | 30 | 0.0000 |
+| FL_thigh_joint | 0.0000, 0.0958, 0.0000 | 0 1 0 | -1.5708 | 3.4907 | 23.7 | 30 | 0.9442 |
+| FL_calf_joint | 0.0000, 0.0000, -0.2000 | 0 1 0 | -2.7227 | -0.83776 | 23.7 | 30 | -1.9148 |
 | FL_foot_joint (고정) | 0.0000, 0.0000, -0.2165 | | | | | | |
-| FR_hip_joint | 0.2283, -0.0475, 0.0000 | 1 0 0 | -1.0472 | 1.0472 | 23.7 | 30.1 | 0.0000 |
-| FR_thigh_joint | 0.0000, -0.0958, 0.0000 | 0 1 0 | -1.5708 | 3.4907 | 23.7 | 30.1 | 0.9442 |
-| FR_calf_joint | 0.0000, 0.0000, -0.2000 | 0 1 0 | -2.7227 | -0.83776 | 45.43 | 15.7 | -1.9148 |
+| FR_hip_joint | 0.2283, -0.0475, 0.0000 | 1 0 0 | -1.0472 | 1.0472 | 23.7 | 30 | 0.0000 |
+| FR_thigh_joint | 0.0000, -0.0958, 0.0000 | 0 1 0 | -1.5708 | 3.4907 | 23.7 | 30 | 0.9442 |
+| FR_calf_joint | 0.0000, 0.0000, -0.2000 | 0 1 0 | -2.7227 | -0.83776 | 23.7 | 30 | -1.9148 |
 | FR_foot_joint (고정) | 0.0000, 0.0000, -0.2165 | | | | | | |
-| RL_hip_joint | -0.2283, 0.0475, 0.0000 | 1 0 0 | -1.0472 | 1.0472 | 23.7 | 30.1 | 0.0712 |
-| RL_thigh_joint | 0.0000, 0.0958, 0.0000 | 0 1 0 | -0.5236 | 4.5379 | 23.7 | 30.1 | 0.8206 |
-| RL_calf_joint | 0.0000, 0.0000, -0.2000 | 0 1 0 | -2.7227 | -0.83776 | 45.43 | 15.7 | -1.7686 |
+| RL_hip_joint | -0.2283, 0.0475, 0.0000 | 1 0 0 | -1.0472 | 1.0472 | 23.7 | 30 | 0.0712 |
+| RL_thigh_joint | 0.0000, 0.0958, 0.0000 | 0 1 0 | -0.5236 | 4.5379 | 23.7 | 30 | 0.8206 |
+| RL_calf_joint | 0.0000, 0.0000, -0.2000 | 0 1 0 | -2.7227 | -0.83776 | 23.7 | 30 | -1.7686 |
 | RL_foot_joint (고정) | 0.0000, 0.0000, -0.2165 | | | | | | |
-| RR_hip_joint | -0.2283, -0.0475, 0.0000 | 1 0 0 | -1.0472 | 1.0472 | 23.7 | 30.1 | -0.0712 |
-| RR_thigh_joint | 0.0000, -0.0958, 0.0000 | 0 1 0 | -0.5236 | 4.5379 | 23.7 | 30.1 | 0.8206 |
-| RR_calf_joint | 0.0000, 0.0000, -0.2000 | 0 1 0 | -2.7227 | -0.83776 | 45.43 | 15.7 | -1.7686 |
+| RR_hip_joint | -0.2283, -0.0475, 0.0000 | 1 0 0 | -1.0472 | 1.0472 | 23.7 | 30 | -0.0712 |
+| RR_thigh_joint | 0.0000, -0.0958, 0.0000 | 0 1 0 | -0.5236 | 4.5379 | 23.7 | 30 | 0.8206 |
+| RR_calf_joint | 0.0000, 0.0000, -0.2000 | 0 1 0 | -2.7227 | -0.83776 | 23.7 | 30 | -1.7686 |
 | RR_foot_joint (고정) | 0.0000, 0.0000, -0.2165 | | | | | | |
 
 허벅지 길이 0.2000 m, 종아리(무릎 축→발 중심) 0.2165 m, 발 반지름 0.0250 m. Go2는 각각 0.213, 0.213, 0.022 m입니다.
 
+## 모터
+
+모든 관절에 Unitree GO-M8010-6을 씁니다(감속비 6.33, 출력축 최대 23.7 N·m, 최대 30 rad/s, RS-485). 몸체에 hip 모터 4개, hip 링크에 thigh 모터, thigh 링크에 calf 모터가 있고, calf 모터는 벨트 1:1로 무릎 종동풀리를 돌립니다. 그래서 calf 관절각은 calf 모터 출력각과 같은 꼴(방향·영점만 다름)이고 thigh 관절과 섞이지 않으며, 토크·속도 한계도 다른 관절과 같습니다. URDF·MuJoCo·USD의 effort·velocity는 모두 23.7 N·m, 30 rad/s입니다.
+
 ## Go2에서 가져온 값
 
-- 관절 한계·effort·velocity: `Go2/usd/configuration/go2_description_physics.usd` (https://huggingface.co/datasets/unitreerobotics/unitree_model). USD의 float32 값을 유효숫자 6자리로 옮겼습니다(예: 60.0001° → 1.0472 rad).
-- Isaac Lab 설정: https://github.com/unitreerobotics/unitree_rl_lab @ `4960b84`의 `UNITREE_GO2_CFG` — 초기 자세(pos 0.4 m, hip ±0.1, 앞 thigh 0.8, 뒤 thigh 1.0, calf −1.5), GO2HV 액추에이터(stiffness 25, damping 0.5, friction 0.01, 토크-속도 곡선 X1 13.5, X2 30, Y1 20.2, Y2 23.4), soft_joint_pos_limit_factor 0.9, self collision 사용.
+- 관절 위치 한계: `Go2/usd/configuration/go2_description_physics.usd` (https://huggingface.co/datasets/unitreerobotics/unitree_model). USD의 float32 값을 유효숫자 6자리로 옮겼습니다(예: 60.0001° → 1.0472 rad).
+- Isaac Lab 설정: https://github.com/unitreerobotics/unitree_rl_lab @ `4960b84`의 `UNITREE_GO2_CFG` — 초기 자세(pos 0.4 m, hip ±0.1, 앞 thigh 0.8, 뒤 thigh 1.0, calf −1.5), GO2HV 액추에이터(stiffness 25, damping 0.5, friction 0.01, 토크-속도 곡선 X1 13.5, X2 30, Y1 20.2, Y2 23.4), soft_joint_pos_limit_factor 0.9, self collision 사용. 이 파일은 아직 Go2HV 액추에이터 값을 그대로 쓰므로 GO-M8010-6 값과 다릅니다.
 - USD에 joint friction, armature는 없습니다. Go2의 rotor 링크(모터 회전자 질량)는 넣지 않았습니다. HYPER는 모터 질량이 각 서브 조립품에 이미 들어 있습니다.
-- MuJoCo의 `view.py`는 같은 PD와 토크-속도 제한을 Python으로 구현합니다.
+- MuJoCo의 `view.py`는 같은 PD(25, 0.5)에 Isaac Lab `DCMotor` 토크-속도 제한(GO-M8010-6: 정지 23.7 N·m, 무부하 30 rad/s)을 Python으로 구현합니다.
 
 ## 충돌
 
@@ -133,7 +140,7 @@ CAD 조립품(`trunk-hip-thigh-calf-foot.iam`) 좌표와의 관계: base x = CAD
 - **질량 재정의가 없는 부품**(재질 기본 밀도 1.0 g/cm³ 그대로): 숄더M8-L45, 스페이서-L25, 스페이서-L35, 파이프.
 - 추출 시점에 Inventor에서 저장되지 않은 변경이 있던 문서: thigh.iam, 숄더M8-L45.ipt. 메모리 상태 값을 썼습니다.
 - CAD 자세에서 무릎 부품끼리 이미 49 mm³ 겹칩니다(스페이서-L35와 종동풀리, 윗링크와 lowleg).
-- 무릎은 벨트 구동이지만 감속비를 확인하지 못해, effort·velocity는 Go2 calf 값(45.43 N·m, 15.7 rad/s)을 그대로 두었습니다.
+- ~~무릎 감속비~~: thigh에 달린 GO-M8010-6이 벨트 1:1로 구동합니다(2026-11-10 확인). effort·velocity를 Go2 calf 값(45.43 N·m, 15.7 rad/s)에서 23.7 N·m, 30 rad/s로 바꿨습니다. `mujoco/check_result.json`은 바꾸기 전 값으로 만든 것이지만, 선 자세 최대 토크가 11.7 N·m라 결과는 같습니다(다시 돌려 0.2969 m, 11.68 N·m 확인).
 
 ## 생성 방법
 
