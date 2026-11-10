@@ -1,0 +1,502 @@
+{
+  "asset": "usd/hyper.usd",
+  "scene": "usd/hyper_scene.usda",
+  "materials": {
+    "base": "/hyper_v1/Looks/material_body",
+    "FL_hip": "/hyper_v1/Looks/material_leg",
+    "FL_thigh": "/hyper_v1/Looks/material_leg",
+    "FL_calf": "/hyper_v1/Looks/material_leg",
+    "FR_hip": "/hyper_v1/Looks/material_leg",
+    "FR_thigh": "/hyper_v1/Looks/material_leg",
+    "FR_calf": "/hyper_v1/Looks/material_leg",
+    "RL_hip": "/hyper_v1/Looks/material_leg",
+    "RL_thigh": "/hyper_v1/Looks/material_leg",
+    "RL_calf": "/hyper_v1/Looks/material_leg",
+    "RR_hip": "/hyper_v1/Looks/material_leg",
+    "RR_thigh": "/hyper_v1/Looks/material_leg",
+    "RR_calf": "/hyper_v1/Looks/material_leg"
+  },
+  "standing": {
+    "final_base_height_m": 0.2965957820415497,
+    "tilt_deg": 0.9444391344163788,
+    "height_change_last_2s_m": 0.0004540681838989258,
+    "max_abs_pd_torque": 4.158061109483242,
+    "floor_contacts_min_sep_m": {
+      "FR_foot": -2.3283064365386963e-07,
+      "FL_foot": -2.477318048477173e-07,
+      "RL_foot": -2.0302832126617432e-07,
+      "RR_foot": -1.73225998878479e-07
+    },
+    "final_joint_pos": {
+      "FL_hip_joint": 0.09125462174415588,
+      "FR_hip_joint": -0.09116384387016296,
+      "RL_hip_joint": 0.1066226214170456,
+      "RR_hip_joint": -0.10650131851434708,
+      "FL_thigh_joint": 0.802895724773407,
+      "FR_thigh_joint": 0.8027634620666504,
+      "RL_thigh_joint": 0.9740743041038513,
+      "RR_thigh_joint": 0.9741098880767822,
+      "FL_calf_joint": -1.629408836364746,
+      "FR_calf_joint": -1.6295063495635986,
+      "RL_calf_joint": -1.665071964263916,
+      "RR_calf_joint": -1.665228009223938
+    },
+    "base_pos": [
+      -0.04660961404442787,
+      -3.985919101978652e-05,
+      0.2965957820415497
+    ],
+    "base_quat_wxyz": [
+      0.9999660849571228,
+      1.0660871339496225e-05,
+      -0.008241686038672924,
+      -2.792564919218421e-05
+    ]
+  },
+  "pose_contacts": {
+    "zero": {},
+    "init": {},
+    "cad": {}
+  },
+  "joint_sweep_contacts": {
+    "FL_hip_joint": {
+      "FL_thigh|base": [
+        -1.0472,
+        1.0472
+      ],
+      "FL_foot|FR_calf": [
+        -1.0472,
+        -0.8692
+      ],
+      "FL_calf|FR_calf": [
+        -1.0472,
+        -0.9006
+      ],
+      "FL_foot|FR_foot": [
+        -0.9844,
+        -0.9111
+      ]
+    },
+    "FR_hip_joint": {
+      "FR_thigh|base": [
+        -1.0472,
+        1.0472
+      ],
+      "FL_calf|FR_foot": [
+        0.8692,
+        1.0472
+      ],
+      "FL_calf|FR_calf": [
+        0.9006,
+        1.0472
+      ],
+      "FL_foot|FR_foot": [
+        0.9111,
+        0.9844
+      ]
+    },
+    "RL_hip_joint": {
+      "RL_calf|RR_calf": [
+        -1.0472,
+        -0.9215
+      ],
+      "RL_foot|RR_calf": [
+        -1.0472,
+        -0.8901
+      ],
+      "RL_foot|RR_foot": [
+        -0.9948,
+        -0.932
+      ]
+    },
+    "RR_hip_joint": {
+      "RL_calf|RR_foot": [
+        0.8901,
+        1.0472
+      ],
+      "RL_calf|RR_calf": [
+        0.9215,
+        1.0472
+      ],
+      "RL_foot|RR_foot": [
+        0.932,
+        0.9948
+      ]
+    },
+    "FL_thigh_joint": {
+      "FL_thigh|base": [
+        1.4155,
+        2.6556
+      ]
+    },
+    "FR_thigh_joint": {
+      "FR_thigh|base": [
+        1.3902,
+        2.6556
+      ]
+    },
+    "RL_thigh_joint": {
+      "FL_thigh|RL_foot": [
+        -0.5236,
+        -0.2705
+      ],
+      "FL_calf|RL_foot": [
+        -0.473,
+        -0.2705
+      ],
+      "RL_thigh|base": [
+        3.6268,
+        4.5379
+      ]
+    },
+    "RR_thigh_joint": {
+      "FR_thigh|RR_foot": [
+        -0.5236,
+        -0.2705
+      ],
+      "FR_calf|RR_foot": [
+        -0.473,
+        -0.2705
+      ],
+      "RR_thigh|base": [
+        3.6268,
+        4.5379
+      ]
+    },
+    "FL_calf_joint": {},
+    "FR_calf_joint": {},
+    "RL_calf_joint": {},
+    "RR_calf_joint": {}
+  },
+  "rows": [
+    {
+      "item": "stage: up axis, meters per unit, kg per unit",
+      "expected": [
+        "Z",
+        1.0,
+        1.0
+      ],
+      "measured": [
+        "Z",
+        1.0,
+        1.0
+      ],
+      "pass": true
+    },
+    {
+      "item": "default prim and variant selection",
+      "expected": {
+        "defaultPrim": "/hyper_v1",
+        "Physics": "PhysX"
+      },
+      "measured": {
+        "defaultPrim": "/hyper_v1",
+        "Physics": "PhysX",
+        "Sensor": "Sensors",
+        "Robot": "Robot"
+      },
+      "pass": true
+    },
+    {
+      "item": "rigid bodies = URDF links",
+      "expected": [
+        "FL_calf",
+        "FL_foot",
+        "FL_hip",
+        "FL_thigh",
+        "FR_calf",
+        "FR_foot",
+        "FR_hip",
+        "FR_thigh",
+        "RL_calf",
+        "RL_foot",
+        "RL_hip",
+        "RL_thigh",
+        "RR_calf",
+        "RR_foot",
+        "RR_hip",
+        "RR_thigh",
+        "base"
+      ],
+      "measured": [
+        "FL_calf",
+        "FL_foot",
+        "FL_hip",
+        "FL_thigh",
+        "FR_calf",
+        "FR_foot",
+        "FR_hip",
+        "FR_thigh",
+        "RL_calf",
+        "RL_foot",
+        "RL_hip",
+        "RL_thigh",
+        "RR_calf",
+        "RR_foot",
+        "RR_hip",
+        "RR_thigh",
+        "base"
+      ],
+      "pass": true
+    },
+    {
+      "item": "one articulation root on base, self collision on",
+      "expected": [
+        [
+          "/hyper_v1/base"
+        ],
+        [
+          true
+        ]
+      ],
+      "measured": [
+        [
+          "/hyper_v1/base"
+        ],
+        [
+          true
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "item": "body masses (max relative error)",
+      "expected": "< 1e-6",
+      "measured": 3.84552392189267e-08,
+      "pass": true
+    },
+    {
+      "item": "body centres of mass (max error m)",
+      "expected": "< 1e-6",
+      "measured": 3.1766608232786098e-09,
+      "pass": true
+    },
+    {
+      "item": "inertia tensor R diag R^T vs URDF (max error / max |I|)",
+      "expected": "< 1e-4",
+      "measured": 1.1219186822675232e-07,
+      "pass": true
+    },
+    {
+      "item": "total mass kg",
+      "expected": 12.32860846582,
+      "measured": 12.328608632087708,
+      "pass": true
+    },
+    {
+      "item": "joints = URDF joints (12 revolute + 4 fixed)",
+      "expected": [
+        "FL_calf_joint",
+        "FL_foot_joint",
+        "FL_hip_joint",
+        "FL_thigh_joint",
+        "FR_calf_joint",
+        "FR_foot_joint",
+        "FR_hip_joint",
+        "FR_thigh_joint",
+        "RL_calf_joint",
+        "RL_foot_joint",
+        "RL_hip_joint",
+        "RL_thigh_joint",
+        "RR_calf_joint",
+        "RR_foot_joint",
+        "RR_hip_joint",
+        "RR_thigh_joint"
+      ],
+      "measured": [
+        "FL_calf_joint",
+        "FL_foot_joint",
+        "FL_hip_joint",
+        "FL_thigh_joint",
+        "FR_calf_joint",
+        "FR_foot_joint",
+        "FR_hip_joint",
+        "FR_thigh_joint",
+        "RL_calf_joint",
+        "RL_foot_joint",
+        "RL_hip_joint",
+        "RL_thigh_joint",
+        "RR_calf_joint",
+        "RR_foot_joint",
+        "RR_hip_joint",
+        "RR_thigh_joint"
+      ],
+      "pass": true
+    },
+    {
+      "item": "joint frames, bodies, axes, limits, effort, velocity, drive (force PD 25/0.5)",
+      "expected": [],
+      "measured": [],
+      "pass": true
+    },
+    {
+      "item": "floating base (no joint to world)",
+      "expected": [],
+      "measured": [],
+      "pass": true
+    },
+    {
+      "item": "link transforms in the asset = URDF FK at q = 0 (max error)",
+      "expected": "< 1e-6",
+      "measured": 7.3090631325101185e-09,
+      "pass": true
+    },
+    {
+      "item": "colliders per link = URDF (convexHull meshes, foot sphere r 0.025)",
+      "expected": [],
+      "measured": [],
+      "pass": true
+    },
+    {
+      "item": "visual mesh AABB in link frame vs STL x URDF origin (max error m)",
+      "expected": "< 1e-5",
+      "measured": 3.605938259099162e-08,
+      "pass": true
+    },
+    {
+      "item": "collision mesh AABB / sphere vs URDF (max error m)",
+      "expected": "< 1e-5",
+      "measured": 3.774868470585169e-08,
+      "pass": true
+    },
+    {
+      "item": "visual meshes not instanced and bound to the URDF material",
+      "expected": [],
+      "measured": [],
+      "pass": true
+    },
+    {
+      "item": "articulation DOFs = URDF revolute joints",
+      "expected": [
+        "FL_calf_joint",
+        "FL_hip_joint",
+        "FL_thigh_joint",
+        "FR_calf_joint",
+        "FR_hip_joint",
+        "FR_thigh_joint",
+        "RL_calf_joint",
+        "RL_hip_joint",
+        "RL_thigh_joint",
+        "RR_calf_joint",
+        "RR_hip_joint",
+        "RR_thigh_joint"
+      ],
+      "measured": [
+        "FL_calf_joint",
+        "FL_hip_joint",
+        "FL_thigh_joint",
+        "FR_calf_joint",
+        "FR_hip_joint",
+        "FR_thigh_joint",
+        "RL_calf_joint",
+        "RL_hip_joint",
+        "RL_thigh_joint",
+        "RR_calf_joint",
+        "RR_hip_joint",
+        "RR_thigh_joint"
+      ],
+      "pass": true
+    },
+    {
+      "item": "scene start = Isaac Lab init state (joint err rad, base z m)",
+      "expected": [
+        "< 1e-3",
+        0.4
+      ],
+      "measured": [
+        1.1920928910669204e-08,
+        0.39926427602767944
+      ],
+      "pass": true
+    },
+    {
+      "item": "simulation stays finite",
+      "expected": true,
+      "measured": true,
+      "pass": true
+    },
+    {
+      "item": "standing: base tilt deg after settling",
+      "expected": "< 5",
+      "measured": 0.9444391344163788,
+      "pass": true
+    },
+    {
+      "item": "standing: base height change in the last 2 s (m)",
+      "expected": "< 0.001",
+      "measured": 0.0004540681838989258,
+      "pass": true
+    },
+    {
+      "item": "standing: only feet touch the floor (sep < 1 mm)",
+      "expected": [
+        "FL_foot",
+        "FR_foot",
+        "RL_foot",
+        "RR_foot"
+      ],
+      "measured": [
+        "FL_foot",
+        "FR_foot",
+        "RL_foot",
+        "RR_foot"
+      ],
+      "pass": true
+    },
+    {
+      "item": "standing: no self-penetration",
+      "expected": {},
+      "measured": {},
+      "pass": true
+    },
+    {
+      "item": "standing: base height vs MuJoCo (m)",
+      "expected": "0.2969 +- 0.01",
+      "measured": 0.2965957820415497,
+      "pass": true
+    },
+    {
+      "item": "standing: joint angles vs MuJoCo final_qpos (max abs rad)",
+      "expected": "< 0.05",
+      "measured": 0.02231918075982353,
+      "pass": true
+    },
+    {
+      "item": "standing: max |PD torque| in the last 2 s (N*m, MuJoCo max_abs_torque for reference)",
+      "expected": "<= effort, MuJoCo 11.68",
+      "measured": 4.158061109483242,
+      "pass": true
+    },
+    {
+      "item": "no self-contact at zero pose",
+      "expected": {},
+      "measured": {},
+      "pass": true
+    },
+    {
+      "item": "no self-contact at init pose",
+      "expected": {},
+      "measured": {},
+      "pass": true
+    },
+    {
+      "item": "no self-contact at cad pose",
+      "expected": {},
+      "measured": {},
+      "pass": true
+    },
+    {
+      "item": "joint sweep: same contact pairs as MuJoCo",
+      "expected": [],
+      "measured": [],
+      "pass": true
+    },
+    {
+      "item": "joint sweep: contact interval ends vs MuJoCo (max abs rad)",
+      "expected": "< 0.1",
+      "measured": 0.03380000000000005,
+      "pass": true
+    }
+  ],
+  "all_pass": true
+}

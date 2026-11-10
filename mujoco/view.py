@@ -2,11 +2,11 @@
 
     python view.py            (from the mujoco folder of the HYPER package)
 
-Control follows unitree_rl_lab's Go2 config (UNITREE_GO2_CFG, UnitreeActuatorCfg_Go2HV):
-PD with stiffness 25 N·m/rad and damping 0.5 N·m·s/rad toward the init_state pose, then the torque-speed
-limit of UnitreeActuator (X1, X2, Y1, Y2 below). Needs only `pip install mujoco`.
+Control follows Isaac Lab's Go2 config (isaaclab_assets UNITREE_GO2_CFG, DCMotorCfg) with HYPER's motor,
+Unitree GO-M8010-6 on every joint (calf belt driven 1:1): PD with stiffness 25 N·m/rad and damping
+0.5 N·m·s/rad toward the init_state pose, then Isaac Lab's DCMotor four-quadrant torque-speed limit
+(stall 23.7 N·m, no-load 30 rad/s, cap 23.7 N·m). Needs only `pip install mujoco`.
 """
-import math
 import sys
 import time
 from pathlib import Path
@@ -17,18 +17,15 @@ import numpy as np
 
 SCENE = Path(__file__).resolve().parent / "hyper_scene.xml"
 STIFFNESS, DAMPING = 25.0, 0.5
-X1, X2, Y1, Y2 = 13.5, 30.0, 20.2, 23.4      # rad/s, rad/s, N·m, N·m
-FS, FD, VA = 0.0, 0.0, 0.01                   # Go2HV leaves the actuator friction model at zero
+SATURATION_EFFORT, EFFORT_LIMIT, VELOCITY_LIMIT = 23.7, 23.7, 30.0   # GO-M8010-6 output: N·m, N·m, rad/s
 
 
 def torque_limit(tau, qd):
-    """UnitreeActuator._clip_effort: Y1 when torque and speed share a sign, else Y2, falling linearly to zero
-    between X1 and X2."""
-    max_effort = np.where(qd * tau > 0, Y1, Y2)
-    slope = -max_effort / (X2 - X1)
-    fading = np.clip(slope * (np.abs(qd) - X1) + max_effort, 0.0, None)
-    max_effort = np.where(np.abs(qd) < X1, max_effort, fading)
-    return np.clip(tau, -max_effort, max_effort)
+    """isaaclab.actuators.DCMotor._clip_effort."""
+    qd = np.clip(qd, -VELOCITY_LIMIT * (1 + EFFORT_LIMIT / SATURATION_EFFORT), VELOCITY_LIMIT * (1 + EFFORT_LIMIT / SATURATION_EFFORT))
+    top = np.minimum(SATURATION_EFFORT * (1.0 - qd / VELOCITY_LIMIT), EFFORT_LIMIT)
+    bottom = np.maximum(SATURATION_EFFORT * (-1.0 - qd / VELOCITY_LIMIT), -EFFORT_LIMIT)
+    return np.clip(tau, bottom, top)
 
 
 class Controller:
@@ -43,7 +40,7 @@ class Controller:
         q = data.qpos[self.qpos_adr]
         qd = data.qvel[self.dof_adr]
         tau = STIFFNESS * (self.target - q) - DAMPING * qd
-        tau = torque_limit(tau, qd) - (FS * np.tanh(qd / VA) + FD * qd)
+        tau = torque_limit(tau, qd)
         data.ctrl[:] = tau
         return tau
 

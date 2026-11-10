@@ -1,0 +1,277 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+    doc = "HYPER v1 in Isaac Sim: ground, lights, robot at the Isaac Lab init pose. Made by isaacsim/make_scene.py"
+    endTimeCode = 1000000
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    startTimeCode = 0
+    upAxis = "Z"
+)
+
+def Xform "World"
+{
+    def Xform "groundPlane"
+    {
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Mesh "geom"
+        {
+            uniform bool doubleSided = 1
+            int[] faceVertexCounts = [4]
+            int[] faceVertexIndices = [0, 1, 2, 3]
+            normal3f[] normals = [(0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1)]
+            point3f[] points = [(-25, -25, 0), (25, -25, 0), (25, 25, 0), (-25, 25, 0)]
+            color3f[] primvars:displayColor = [(0.42, 0.44, 0.46)]
+        }
+
+        def Plane "collisionPlane" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+        )
+        {
+            uniform token axis = "Z"
+            rel material:binding:physics = </World/Physics/groundMaterial> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            uniform token purpose = "guide"
+        }
+    }
+
+    def "Physics"
+    {
+        def Material "groundMaterial" (
+            prepend apiSchemas = ["PhysicsMaterialAPI"]
+        )
+        {
+            float physics:dynamicFriction = 1
+            float physics:restitution = 0
+            float physics:staticFriction = 1
+        }
+    }
+
+    def "Lights"
+    {
+        def DomeLight "dome"
+        {
+            float inputs:intensity = 120
+        }
+
+        def DistantLight "sun"
+        {
+            float inputs:angle = 1
+            float inputs:intensity = 600
+            float3 xformOp:rotateXYZ = (35, 0, 40)
+            uniform token[] xformOpOrder = ["xformOp:rotateXYZ"]
+        }
+    }
+
+    def Xform "HYPER" (
+        prepend references = @./hyper.usd@
+    )
+    {
+        quatd xformOp:orient = (1, 0, 0, 0)
+        double3 xformOp:translate = (0, 0, 0.4)
+
+        over "joints"
+        {
+            over "FL_hip_joint"
+            {
+                float drive:angular:physics:targetPosition = 5.729578
+                float state:angular:physics:position = 5.729578
+                float state:angular:physics:velocity = 0
+            }
+
+            over "FL_thigh_joint"
+            {
+                float drive:angular:physics:targetPosition = 45.836624
+                float state:angular:physics:position = 45.836624
+                float state:angular:physics:velocity = 0
+            }
+
+            over "FL_calf_joint"
+            {
+                float drive:angular:physics:targetPosition = -85.94367
+                float state:angular:physics:position = -85.94367
+                float state:angular:physics:velocity = 0
+            }
+
+            over "FR_hip_joint"
+            {
+                float drive:angular:physics:targetPosition = -5.729578
+                float state:angular:physics:position = -5.729578
+                float state:angular:physics:velocity = 0
+            }
+
+            over "FR_thigh_joint"
+            {
+                float drive:angular:physics:targetPosition = 45.836624
+                float state:angular:physics:position = 45.836624
+                float state:angular:physics:velocity = 0
+            }
+
+            over "FR_calf_joint"
+            {
+                float drive:angular:physics:targetPosition = -85.94367
+                float state:angular:physics:position = -85.94367
+                float state:angular:physics:velocity = 0
+            }
+
+            over "RL_hip_joint"
+            {
+                float drive:angular:physics:targetPosition = 5.729578
+                float state:angular:physics:position = 5.729578
+                float state:angular:physics:velocity = 0
+            }
+
+            over "RL_thigh_joint"
+            {
+                float drive:angular:physics:targetPosition = 57.29578
+                float state:angular:physics:position = 57.29578
+                float state:angular:physics:velocity = 0
+            }
+
+            over "RL_calf_joint"
+            {
+                float drive:angular:physics:targetPosition = -85.94367
+                float state:angular:physics:position = -85.94367
+                float state:angular:physics:velocity = 0
+            }
+
+            over "RR_hip_joint"
+            {
+                float drive:angular:physics:targetPosition = -5.729578
+                float state:angular:physics:position = -5.729578
+                float state:angular:physics:velocity = 0
+            }
+
+            over "RR_thigh_joint"
+            {
+                float drive:angular:physics:targetPosition = 57.29578
+                float state:angular:physics:position = 57.29578
+                float state:angular:physics:velocity = 0
+            }
+
+            over "RR_calf_joint"
+            {
+                float drive:angular:physics:targetPosition = -85.94367
+                float state:angular:physics:position = -85.94367
+                float state:angular:physics:velocity = 0
+            }
+        }
+
+        over "base"
+        {
+            quatd xformOp:orient = (1, 0, 0, 0)
+            double3 xformOp:translate = (0, 0, 0)
+        }
+
+        over "FL_hip"
+        {
+            quatd xformOp:orient = (0.9987502603949663, 0.04997916927067833, 0, 0)
+            double3 xformOp:translate = (0.2283, 0.0474993098501, 0)
+        }
+
+        over "FL_thigh"
+        {
+            quatd xformOp:orient = (0.919909907600028, 0.04603386332788874, 0.38893167078334084, 0.019462805247351243)
+            double3 xformOp:translate = (0.2283, 0.14282070888373488, 0.009564041314766137)
+        }
+
+        over "FL_calf"
+        {
+            quatd xformOp:orient = (0.9381987415642455, 0.04694906782365491, -0.3424692744849951, -0.017137747561361178)
+            double3 xformOp:translate = (0.08482878182009543, 0.15673163112271413, -0.1290811742407492)
+        }
+
+        over "FL_foot"
+        {
+            quatd xformOp:orient = (0.9381987415642455, 0.04694906782365491, -0.3424692744849951, -0.017137747561361178)
+            double3 xformOp:translate = (0.22428209422370357, 0.1732605313935638, -0.29381884594782093)
+        }
+
+        over "FR_hip"
+        {
+            quatd xformOp:orient = (0.9987502603949663, -0.04997916927067833, 0, 0)
+            double3 xformOp:translate = (0.2283, -0.0474993098501, 0)
+        }
+
+        over "FR_thigh"
+        {
+            quatd xformOp:orient = (0.919909907600028, -0.04603386332788874, 0.38893167078334084, -0.019462805247351243)
+            double3 xformOp:translate = (0.2283, -0.14282070888373488, 0.009564041314766137)
+        }
+
+        over "FR_calf"
+        {
+            quatd xformOp:orient = (0.9381987415642455, -0.04694906782365491, -0.3424692744849951, 0.017137747561361178)
+            double3 xformOp:translate = (0.08482878182009543, -0.15673163112271413, -0.1290811742407492)
+        }
+
+        over "FR_foot"
+        {
+            quatd xformOp:orient = (0.9381987415642455, -0.04694906782365491, -0.3424692744849951, 0.017137747561361178)
+            double3 xformOp:translate = (0.22428209422370357, -0.1732605313935638, -0.29381884594782093)
+        }
+
+        over "RL_hip"
+        {
+            quatd xformOp:orient = (0.9987502603949663, 0.04997916927067833, 0, 0)
+            double3 xformOp:translate = (-0.2283, 0.0474993098502, 0)
+        }
+
+        over "RL_thigh"
+        {
+            quatd xformOp:orient = (0.8764858122060913, 0.043860847409714104, 0.47882638152094464, 0.023961290146585712)
+            double3 xformOp:translate = (-0.2283, 0.14282070888383486, 0.009564041314766137)
+        }
+
+        over "RL_calf"
+        {
+            quatd xformOp:orient = (0.9677015334834238, 0.04842543793313923, -0.24709476872820046, -0.01236504435781764)
+            double3 xformOp:translate = (-0.3965941969615793, 0.15360875392723006, -0.09795656765485808)
+        }
+
+        over "RL_foot"
+        {
+            quatd xformOp:orient = (0.9677015334834238, 0.04842543793313923, -0.24709476872820046, -0.01236504435781764)
+            double3 xformOp:translate = (-0.29281331553947043, 0.17257407106856512, -0.28697713997688795)
+        }
+
+        over "RR_hip"
+        {
+            quatd xformOp:orient = (0.9987502603949663, -0.04997916927067833, 0, 0)
+            double3 xformOp:translate = (-0.2283, -0.0474993098502, 0)
+        }
+
+        over "RR_thigh"
+        {
+            quatd xformOp:orient = (0.8764858122060913, -0.043860847409714104, 0.47882638152094464, -0.023961290146585712)
+            double3 xformOp:translate = (-0.2283, -0.14282070888383486, 0.009564041314766137)
+        }
+
+        over "RR_calf"
+        {
+            quatd xformOp:orient = (0.9677015334834238, -0.04842543793313923, -0.24709476872820046, 0.01236504435781764)
+            double3 xformOp:translate = (-0.3965941969615793, -0.15360875392723006, -0.09795656765485808)
+        }
+
+        over "RR_foot"
+        {
+            quatd xformOp:orient = (0.9677015334834238, -0.04842543793313923, -0.24709476872820046, 0.01236504435781764)
+            double3 xformOp:translate = (-0.29281331553947043, -0.17257407106856512, -0.28697713997688795)
+        }
+    }
+}
+
+def PhysicsScene "physicsScene" (
+    prepend apiSchemas = ["PhysxSceneAPI"]
+)
+{
+    vector3f physics:gravityDirection = (0, 0, -1)
+    float physics:gravityMagnitude = 9.81
+    uint physxScene:timeStepsPerSecond = 200
+}
+

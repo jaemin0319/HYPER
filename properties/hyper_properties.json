@@ -366,14 +366,14 @@
     0.001060510363334245,
     0.001076338725002993
    ],
-   "mesh": "calf-foot.stl",
+   "mesh": "calf_foot.stl",
    "collision": [
     {
-     "file": "collision/calf-foot_c01.stl",
+     "file": "collision/calf_foot_c01.stl",
      "cad_part": "V1_G1_종동풀리_1103_1"
     },
     {
-     "file": "collision/calf-foot_c02.stl",
+     "file": "collision/calf_foot_c02.stl",
      "cad_part": "v1_G1_lowleg_261101_3"
     }
    ],
@@ -757,14 +757,14 @@
     0.0010605103633342457,
     0.0010763387250029913
    ],
-   "mesh": "calf-foot.stl",
+   "mesh": "calf_foot.stl",
    "collision": [
     {
-     "file": "collision/calf-foot_c01.stl",
+     "file": "collision/calf_foot_c01.stl",
      "cad_part": "V1_G1_종동풀리_1103_1"
     },
     {
-     "file": "collision/calf-foot_c02.stl",
+     "file": "collision/calf_foot_c02.stl",
      "cad_part": "v1_G1_lowleg_261101_3"
     }
    ],
@@ -1090,14 +1090,14 @@
     0.001060510363334245,
     0.001076338725002993
    ],
-   "mesh": "calf-foot_mirror.stl",
+   "mesh": "calf_foot_mirror.stl",
    "collision": [
     {
-     "file": "collision/calf-foot_c01_mirror.stl",
+     "file": "collision/calf_foot_c01_mirror.stl",
      "cad_part": "V1_G1_종동풀리_1103_1"
     },
     {
-     "file": "collision/calf-foot_c02_mirror.stl",
+     "file": "collision/calf_foot_c02_mirror.stl",
      "cad_part": "v1_G1_lowleg_261101_3"
     }
    ],
@@ -1365,14 +1365,14 @@
     0.0010605103633342457,
     0.0010763387250029913
    ],
-   "mesh": "calf-foot_mirror.stl",
+   "mesh": "calf_foot_mirror.stl",
    "collision": [
     {
-     "file": "collision/calf-foot_c01_mirror.stl",
+     "file": "collision/calf_foot_c01_mirror.stl",
      "cad_part": "V1_G1_종동풀리_1103_1"
     },
     {
-     "file": "collision/calf-foot_c02_mirror.stl",
+     "file": "collision/calf_foot_c02_mirror.stl",
      "cad_part": "v1_G1_lowleg_261101_3"
     }
    ],
@@ -1487,7 +1487,7 @@
    "lower": -1.0472,
    "upper": 1.0472,
    "effort": 23.7,
-   "velocity": 30.1
+   "velocity": 30.0
   },
   {
    "name": "FL_thigh_joint",
@@ -1507,7 +1507,7 @@
    "lower": -1.5708,
    "upper": 3.4907,
    "effort": 23.7,
-   "velocity": 30.1
+   "velocity": 30.0
   },
   {
    "name": "FL_calf_joint",
@@ -1526,8 +1526,8 @@
    ],
    "lower": -2.7227,
    "upper": -0.83776,
-   "effort": 45.43,
-   "velocity": 15.7
+   "effort": 23.7,
+   "velocity": 30.0
   },
   {
    "name": "FL_foot_joint",
@@ -1558,7 +1558,7 @@
    "lower": -1.0472,
    "upper": 1.0472,
    "effort": 23.7,
-   "velocity": 30.1
+   "velocity": 30.0
   },
   {
    "name": "FR_thigh_joint",
@@ -1578,7 +1578,7 @@
    "lower": -1.5708,
    "upper": 3.4907,
    "effort": 23.7,
-   "velocity": 30.1
+   "velocity": 30.0
   },
   {
    "name": "FR_calf_joint",
@@ -1597,8 +1597,8 @@
    ],
    "lower": -2.7227,
    "upper": -0.83776,
-   "effort": 45.43,
-   "velocity": 15.7
+   "effort": 23.7,
+   "velocity": 30.0
   },
   {
    "name": "FR_foot_joint",
@@ -1629,7 +1629,7 @@
    "lower": -1.0472,
    "upper": 1.0472,
    "effort": 23.7,
-   "velocity": 30.1
+   "velocity": 30.0
   },
   {
    "name": "RL_thigh_joint",
@@ -1649,7 +1649,7 @@
    "lower": -0.5236,
    "upper": 4.5379,
    "effort": 23.7,
-   "velocity": 30.1
+   "velocity": 30.0
   },
   {
    "name": "RL_calf_joint",
@@ -1668,8 +1668,8 @@
    ],
    "lower": -2.7227,
    "upper": -0.83776,
-   "effort": 45.43,
-   "velocity": 15.7
+   "effort": 23.7,
+   "velocity": 30.0
   },
   {
    "name": "RL_foot_joint",
@@ -1700,7 +1700,7 @@
    "lower": -1.0472,
    "upper": 1.0472,
    "effort": 23.7,
-   "velocity": 30.1
+   "velocity": 30.0
   },
   {
    "name": "RR_thigh_joint",
@@ -1720,7 +1720,7 @@
    "lower": -0.5236,
    "upper": 4.5379,
    "effort": 23.7,
-   "velocity": 30.1
+   "velocity": 30.0
   },
   {
    "name": "RR_calf_joint",
@@ -1739,8 +1739,8 @@
    ],
    "lower": -2.7227,
    "upper": -0.83776,
-   "effort": 45.43,
-   "velocity": 15.7
+   "effort": 23.7,
+   "velocity": 30.0
   },
   {
    "name": "RR_foot_joint",
@@ -1841,19 +1841,19 @@
  "collision_meshes": {
   "calf-foot": [
    {
-    "file": "meshes/collision/calf-foot_c01.stl",
+    "file": "meshes/collision/calf_foot_c01.stl",
     "cad_part": "V1_G1_종동풀리_1103_1",
     "triangles": 1312,
     "scale": 0.001
    },
    {
-    "file": "meshes/collision/calf-foot_c02.stl",
+    "file": "meshes/collision/calf_foot_c02.stl",
     "cad_part": "v1_G1_lowleg_261101_3",
     "triangles": 6876,
     "scale": 0.001
    },
    {
-    "file": "meshes/collision/calf-foot_c03.stl",
+    "file": "meshes/collision/calf_foot_c03.stl",
     "cad_part": "v1_G1_발(고무공)_261105_1",
     "triangles": 2038,
     "scale": 0.001
@@ -2107,7 +2107,7 @@
    "ok": true
   },
   {
-   "check": "calf-foot.stl volume vs CAD",
+   "check": "calf_foot.stl volume vs CAD",
    "value": -0.0019146773979329401,
    "limit": 0.005,
    "unit": "",

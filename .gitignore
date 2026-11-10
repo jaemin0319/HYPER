@@ -1,0 +1,13 @@
+# python / local env
+__pycache__/
+*.pyc
+.venv/
+
+# Isaac Lab training logs and local run outputs
+logs/
+outputs/
+
+# rebuilt by isaacsim/convert_urdf.py on every conversion
+usd/_build/
+usd/.asset_hash
+usd/config.yaml

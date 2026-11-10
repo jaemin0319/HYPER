@@ -30,8 +30,8 @@
     <mesh name="thigh_c05" content_type="model/stl" file="../meshes/collision/thigh_c05.stl" scale="0.001 0.001 0.001"/>
     <mesh name="thigh_c06" content_type="model/stl" file="../meshes/collision/thigh_c06.stl" scale="0.001 0.001 0.001"/>
     <mesh name="thigh_c07" content_type="model/stl" file="../meshes/collision/thigh_c07.stl" scale="0.001 0.001 0.001"/>
-    <mesh name="calf-foot_c01" content_type="model/stl" file="../meshes/collision/calf-foot_c01.stl" scale="0.001 0.001 0.001"/>
-    <mesh name="calf-foot_c02" content_type="model/stl" file="../meshes/collision/calf-foot_c02.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="calf_foot_c01" content_type="model/stl" file="../meshes/collision/calf_foot_c01.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="calf_foot_c02" content_type="model/stl" file="../meshes/collision/calf_foot_c02.stl" scale="0.001 0.001 0.001"/>
     <mesh name="hip_c01_mirror" content_type="model/stl" file="../meshes/collision/hip_c01_mirror.stl" scale="0.001 0.001 0.001"/>
     <mesh name="hip_c02_mirror" content_type="model/stl" file="../meshes/collision/hip_c02_mirror.stl" scale="0.001 0.001 0.001"/>
     <mesh name="hip_c03_mirror" content_type="model/stl" file="../meshes/collision/hip_c03_mirror.stl" scale="0.001 0.001 0.001"/>
@@ -42,8 +42,8 @@
     <mesh name="thigh_c05_mirror" content_type="model/stl" file="../meshes/collision/thigh_c05_mirror.stl" scale="0.001 0.001 0.001"/>
     <mesh name="thigh_c06_mirror" content_type="model/stl" file="../meshes/collision/thigh_c06_mirror.stl" scale="0.001 0.001 0.001"/>
     <mesh name="thigh_c07_mirror" content_type="model/stl" file="../meshes/collision/thigh_c07_mirror.stl" scale="0.001 0.001 0.001"/>
-    <mesh name="calf-foot_c01_mirror" content_type="model/stl" file="../meshes/collision/calf-foot_c01_mirror.stl" scale="0.001 0.001 0.001"/>
-    <mesh name="calf-foot_c02_mirror" content_type="model/stl" file="../meshes/collision/calf-foot_c02_mirror.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="calf_foot_c01_mirror" content_type="model/stl" file="../meshes/collision/calf_foot_c01_mirror.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="calf_foot_c02_mirror" content_type="model/stl" file="../meshes/collision/calf_foot_c02_mirror.stl" scale="0.001 0.001 0.001"/>
   </asset>
 
   <worldbody>
@@ -80,9 +80,9 @@
           <geom name="FL_thigh_thigh_c07" pos="0.00132824 0.0109241 -0.08675" quat="1 0 0 0" type="mesh" rgba="0.3 0.32 0.36 1" mesh="thigh_c07"/>
           <body name="FL_calf" pos="0 0 -0.2">
             <inertial pos="0.00777982 0.00257141 -0.0900574" quat="0.72728 -0.0354259 -0.00967131 0.685358" mass="0.168568" diaginertia="0.00107634 0.00106051 5.23765e-05"/>
-            <joint name="FL_calf_joint" range="-2.7227 -0.83776" actuatorfrcrange="-45.43 45.43" axis="0 1 0"/>
-            <geom name="FL_calf_calf-foot_c01" pos="-0.182443 0.0502256 -0.015811" quat="0.588603 0.588603 0.39185 -0.39185" type="mesh" rgba="0.45 0.47 0.5 1" mesh="calf-foot_c01"/>
-            <geom name="FL_calf_calf-foot_c02" pos="-0.182443 0.0502256 -0.015811" quat="0.588603 0.588603 0.39185 -0.39185" type="mesh" rgba="0.45 0.47 0.5 1" mesh="calf-foot_c02"/>
+            <joint name="FL_calf_joint" range="-2.7227 -0.83776" actuatorfrcrange="-23.7 23.7" axis="0 1 0"/>
+            <geom name="FL_calf_calf_foot_c01" pos="-0.182443 0.0502256 -0.015811" quat="0.588603 0.588603 0.39185 -0.39185" type="mesh" rgba="0.45 0.47 0.5 1" mesh="calf_foot_c01"/>
+            <geom name="FL_calf_calf_foot_c02" pos="-0.182443 0.0502256 -0.015811" quat="0.588603 0.588603 0.39185 -0.39185" type="mesh" rgba="0.45 0.47 0.5 1" mesh="calf_foot_c02"/>
             <body name="FL_foot" pos="0 0 -0.216469">
               <inertial pos="-0.00129853 -2.47778e-12 -0.0023053" quat="0.683974 0.179385 0.179385 0.683975" mass="0.5866" diaginertia="0.000148539 0.000132044 0.00012717"/>
               <geom size="0.025" rgba="0.08 0.08 0.08 1"/>
@@ -108,9 +108,9 @@
           <geom name="FR_thigh_thigh_c07" pos="0.00132824 -0.0109241 -0.08675" quat="1 0 0 0" type="mesh" rgba="0.3 0.32 0.36 1" mesh="thigh_c07_mirror"/>
           <body name="FR_calf" pos="0 0 -0.2">
             <inertial pos="0.00777982 -0.00257141 -0.0900574" quat="0.685358 -0.00967131 -0.0354259 0.72728" mass="0.168568" diaginertia="0.00107634 0.00106051 5.23765e-05"/>
-            <joint name="FR_calf_joint" range="-2.7227 -0.83776" actuatorfrcrange="-45.43 45.43" axis="0 1 0"/>
-            <geom name="FR_calf_calf-foot_c01" pos="-0.182443 -0.0502256 -0.015811" quat="0.588603 -0.588603 0.39185 0.39185" type="mesh" rgba="0.45 0.47 0.5 1" mesh="calf-foot_c01_mirror"/>
-            <geom name="FR_calf_calf-foot_c02" pos="-0.182443 -0.0502256 -0.015811" quat="0.588603 -0.588603 0.39185 0.39185" type="mesh" rgba="0.45 0.47 0.5 1" mesh="calf-foot_c02_mirror"/>
+            <joint name="FR_calf_joint" range="-2.7227 -0.83776" actuatorfrcrange="-23.7 23.7" axis="0 1 0"/>
+            <geom name="FR_calf_calf_foot_c01" pos="-0.182443 -0.0502256 -0.015811" quat="0.588603 -0.588603 0.39185 0.39185" type="mesh" rgba="0.45 0.47 0.5 1" mesh="calf_foot_c01_mirror"/>
+            <geom name="FR_calf_calf_foot_c02" pos="-0.182443 -0.0502256 -0.015811" quat="0.588603 -0.588603 0.39185 0.39185" type="mesh" rgba="0.45 0.47 0.5 1" mesh="calf_foot_c02_mirror"/>
             <body name="FR_foot" pos="0 0 -0.216469">
               <inertial pos="-0.00129853 2.47778e-12 -0.0023053" quat="0.683975 0.179385 0.179385 0.683974" mass="0.5866" diaginertia="0.000148539 0.000132044 0.00012717"/>
               <geom size="0.025" rgba="0.08 0.08 0.08 1"/>
@@ -136,9 +136,9 @@
           <geom name="RL_thigh_thigh_c07" pos="0.00132824 0.0109241 -0.08675" quat="1 0 0 0" type="mesh" rgba="0.3 0.32 0.36 1" mesh="thigh_c07"/>
           <body name="RL_calf" pos="0 0 -0.2">
             <inertial pos="0.00777982 0.00257141 -0.0900574" quat="0.72728 -0.0354259 -0.00967131 0.685358" mass="0.168568" diaginertia="0.00107634 0.00106051 5.23765e-05"/>
-            <joint name="RL_calf_joint" range="-2.7227 -0.83776" actuatorfrcrange="-45.43 45.43" axis="0 1 0"/>
-            <geom name="RL_calf_calf-foot_c01" pos="-0.182443 0.0502256 -0.015811" quat="0.588603 0.588603 0.39185 -0.39185" type="mesh" rgba="0.45 0.47 0.5 1" mesh="calf-foot_c01"/>
-            <geom name="RL_calf_calf-foot_c02" pos="-0.182443 0.0502256 -0.015811" quat="0.588603 0.588603 0.39185 -0.39185" type="mesh" rgba="0.45 0.47 0.5 1" mesh="calf-foot_c02"/>
+            <joint name="RL_calf_joint" range="-2.7227 -0.83776" actuatorfrcrange="-23.7 23.7" axis="0 1 0"/>
+            <geom name="RL_calf_calf_foot_c01" pos="-0.182443 0.0502256 -0.015811" quat="0.588603 0.588603 0.39185 -0.39185" type="mesh" rgba="0.45 0.47 0.5 1" mesh="calf_foot_c01"/>
+            <geom name="RL_calf_calf_foot_c02" pos="-0.182443 0.0502256 -0.015811" quat="0.588603 0.588603 0.39185 -0.39185" type="mesh" rgba="0.45 0.47 0.5 1" mesh="calf_foot_c02"/>
             <body name="RL_foot" pos="0 0 -0.216469">
               <inertial pos="-0.00129853 -2.4778e-12 -0.0023053" quat="0.683974 0.179385 0.179385 0.683975" mass="0.5866" diaginertia="0.000148539 0.000132044 0.00012717"/>
               <geom size="0.025" rgba="0.08 0.08 0.08 1"/>
@@ -164,9 +164,9 @@
           <geom name="RR_thigh_thigh_c07" pos="0.00132824 -0.0109241 -0.08675" quat="1 0 0 0" type="mesh" rgba="0.3 0.32 0.36 1" mesh="thigh_c07_mirror"/>
           <body name="RR_calf" pos="0 0 -0.2">
             <inertial pos="0.00777982 -0.00257141 -0.0900574" quat="0.685358 -0.00967131 -0.0354259 0.72728" mass="0.168568" diaginertia="0.00107634 0.00106051 5.23765e-05"/>
-            <joint name="RR_calf_joint" range="-2.7227 -0.83776" actuatorfrcrange="-45.43 45.43" axis="0 1 0"/>
-            <geom name="RR_calf_calf-foot_c01" pos="-0.182443 -0.0502256 -0.015811" quat="0.588603 -0.588603 0.39185 0.39185" type="mesh" rgba="0.45 0.47 0.5 1" mesh="calf-foot_c01_mirror"/>
-            <geom name="RR_calf_calf-foot_c02" pos="-0.182443 -0.0502256 -0.015811" quat="0.588603 -0.588603 0.39185 0.39185" type="mesh" rgba="0.45 0.47 0.5 1" mesh="calf-foot_c02_mirror"/>
+            <joint name="RR_calf_joint" range="-2.7227 -0.83776" actuatorfrcrange="-23.7 23.7" axis="0 1 0"/>
+            <geom name="RR_calf_calf_foot_c01" pos="-0.182443 -0.0502256 -0.015811" quat="0.588603 -0.588603 0.39185 0.39185" type="mesh" rgba="0.45 0.47 0.5 1" mesh="calf_foot_c01_mirror"/>
+            <geom name="RR_calf_calf_foot_c02" pos="-0.182443 -0.0502256 -0.015811" quat="0.588603 -0.588603 0.39185 0.39185" type="mesh" rgba="0.45 0.47 0.5 1" mesh="calf_foot_c02_mirror"/>
             <body name="RR_foot" pos="0 0 -0.216469">
               <inertial pos="-0.00129853 2.4778e-12 -0.0023053" quat="0.683975 0.179385 0.179385 0.683974" mass="0.5866" diaginertia="0.000148539 0.000132044 0.00012717"/>
               <geom size="0.025" rgba="0.08 0.08 0.08 1"/>
@@ -178,18 +178,18 @@
   </worldbody>
 
   <actuator>
-    <general name="FL_hip_joint" joint="FL_hip_joint" ctrlrange="-23.4 23.4" ctrllimited="true"/>
-    <general name="FL_thigh_joint" joint="FL_thigh_joint" ctrlrange="-23.4 23.4" ctrllimited="true"/>
-    <general name="FL_calf_joint" joint="FL_calf_joint" ctrlrange="-23.4 23.4" ctrllimited="true"/>
-    <general name="FR_hip_joint" joint="FR_hip_joint" ctrlrange="-23.4 23.4" ctrllimited="true"/>
-    <general name="FR_thigh_joint" joint="FR_thigh_joint" ctrlrange="-23.4 23.4" ctrllimited="true"/>
-    <general name="FR_calf_joint" joint="FR_calf_joint" ctrlrange="-23.4 23.4" ctrllimited="true"/>
-    <general name="RL_hip_joint" joint="RL_hip_joint" ctrlrange="-23.4 23.4" ctrllimited="true"/>
-    <general name="RL_thigh_joint" joint="RL_thigh_joint" ctrlrange="-23.4 23.4" ctrllimited="true"/>
-    <general name="RL_calf_joint" joint="RL_calf_joint" ctrlrange="-23.4 23.4" ctrllimited="true"/>
-    <general name="RR_hip_joint" joint="RR_hip_joint" ctrlrange="-23.4 23.4" ctrllimited="true"/>
-    <general name="RR_thigh_joint" joint="RR_thigh_joint" ctrlrange="-23.4 23.4" ctrllimited="true"/>
-    <general name="RR_calf_joint" joint="RR_calf_joint" ctrlrange="-23.4 23.4" ctrllimited="true"/>
+    <general name="FL_hip_joint" joint="FL_hip_joint" ctrlrange="-23.7 23.7" ctrllimited="true"/>
+    <general name="FL_thigh_joint" joint="FL_thigh_joint" ctrlrange="-23.7 23.7" ctrllimited="true"/>
+    <general name="FL_calf_joint" joint="FL_calf_joint" ctrlrange="-23.7 23.7" ctrllimited="true"/>
+    <general name="FR_hip_joint" joint="FR_hip_joint" ctrlrange="-23.7 23.7" ctrllimited="true"/>
+    <general name="FR_thigh_joint" joint="FR_thigh_joint" ctrlrange="-23.7 23.7" ctrllimited="true"/>
+    <general name="FR_calf_joint" joint="FR_calf_joint" ctrlrange="-23.7 23.7" ctrllimited="true"/>
+    <general name="RL_hip_joint" joint="RL_hip_joint" ctrlrange="-23.7 23.7" ctrllimited="true"/>
+    <general name="RL_thigh_joint" joint="RL_thigh_joint" ctrlrange="-23.7 23.7" ctrllimited="true"/>
+    <general name="RL_calf_joint" joint="RL_calf_joint" ctrlrange="-23.7 23.7" ctrllimited="true"/>
+    <general name="RR_hip_joint" joint="RR_hip_joint" ctrlrange="-23.7 23.7" ctrllimited="true"/>
+    <general name="RR_thigh_joint" joint="RR_thigh_joint" ctrlrange="-23.7 23.7" ctrllimited="true"/>
+    <general name="RR_calf_joint" joint="RR_calf_joint" ctrlrange="-23.7 23.7" ctrllimited="true"/>
   </actuator>
 
   <keyframe>
