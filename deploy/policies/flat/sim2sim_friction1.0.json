@@ -1,0 +1,243 @@
+{
+ "engine": "mujoco",
+ "xml": "mujoco/hyper_scene.xml",
+ "policy": "deploy/policies/flat",
+ "friction": 1.0,
+ "fell": false,
+ "duration_s": 61.98000000000409,
+ "segments": [
+  {
+   "command": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "mean_velocity": [
+    0.0,
+    -0.0,
+    -0.0
+   ],
+   "mean_abs_error": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "mean_height": 0.219,
+   "min_height": 0.219,
+   "max_tilt_deg": 1.1,
+   "self_contact_frac": 0.0,
+   "nonfoot_ground_frac": 0.0,
+   "self_contact_pairs": []
+  },
+  {
+   "command": [
+    0.5,
+    0.0,
+    0.0
+   ],
+   "mean_velocity": [
+    0.462,
+    0.005,
+    -0.003
+   ],
+   "mean_abs_error": [
+    0.042,
+    0.014,
+    0.031
+   ],
+   "mean_height": 0.229,
+   "min_height": 0.225,
+   "max_tilt_deg": 1.2,
+   "self_contact_frac": 0.0,
+   "nonfoot_ground_frac": 0.0,
+   "self_contact_pairs": []
+  },
+  {
+   "command": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "mean_velocity": [
+    0.905,
+    0.067,
+    0.08
+   ],
+   "mean_abs_error": [
+    0.095,
+    0.067,
+    0.098
+   ],
+   "mean_height": 0.246,
+   "min_height": 0.24,
+   "max_tilt_deg": 4.4,
+   "self_contact_frac": 0.0,
+   "nonfoot_ground_frac": 0.08,
+   "self_contact_pairs": []
+  },
+  {
+   "command": [
+    -0.5,
+    0.0,
+    0.0
+   ],
+   "mean_velocity": [
+    -0.485,
+    -0.001,
+    -0.009
+   ],
+   "mean_abs_error": [
+    0.025,
+    0.013,
+    0.014
+   ],
+   "mean_height": 0.211,
+   "min_height": 0.21,
+   "max_tilt_deg": 2.0,
+   "self_contact_frac": 0.0,
+   "nonfoot_ground_frac": 0.0,
+   "self_contact_pairs": []
+  },
+  {
+   "command": [
+    0.0,
+    0.5,
+    0.0
+   ],
+   "mean_velocity": [
+    -0.021,
+    0.5,
+    -0.02
+   ],
+   "mean_abs_error": [
+    0.036,
+    0.017,
+    0.08
+   ],
+   "mean_height": 0.21,
+   "min_height": 0.206,
+   "max_tilt_deg": 2.5,
+   "self_contact_frac": 0.0,
+   "nonfoot_ground_frac": 0.0,
+   "self_contact_pairs": []
+  },
+  {
+   "command": [
+    0.0,
+    -0.5,
+    0.0
+   ],
+   "mean_velocity": [
+    -0.001,
+    -0.472,
+    -0.002
+   ],
+   "mean_abs_error": [
+    0.027,
+    0.031,
+    0.061
+   ],
+   "mean_height": 0.232,
+   "min_height": 0.231,
+   "max_tilt_deg": 2.3,
+   "self_contact_frac": 0.0,
+   "nonfoot_ground_frac": 0.0,
+   "self_contact_pairs": []
+  },
+  {
+   "command": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "mean_velocity": [
+    -0.02,
+    -0.019,
+    0.626
+   ],
+   "mean_abs_error": [
+    0.056,
+    0.056,
+    0.432
+   ],
+   "mean_height": 0.205,
+   "min_height": 0.196,
+   "max_tilt_deg": 7.1,
+   "self_contact_frac": 0.265,
+   "nonfoot_ground_frac": 0.0,
+   "self_contact_pairs": [
+    "FR_thigh|base"
+   ]
+  },
+  {
+   "command": [
+    0.0,
+    0.0,
+    -1.0
+   ],
+   "mean_velocity": [
+    0.0,
+    -0.0,
+    -0.0
+   ],
+   "mean_abs_error": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "mean_height": 0.235,
+   "min_height": 0.234,
+   "max_tilt_deg": 2.2,
+   "self_contact_frac": 0.0,
+   "nonfoot_ground_frac": 0.0,
+   "self_contact_pairs": []
+  },
+  {
+   "command": [
+    0.5,
+    0.0,
+    0.5
+   ],
+   "mean_velocity": [
+    0.473,
+    0.028,
+    0.408
+   ],
+   "mean_abs_error": [
+    0.041,
+    0.038,
+    0.092
+   ],
+   "mean_height": 0.226,
+   "min_height": 0.221,
+   "max_tilt_deg": 2.0,
+   "self_contact_frac": 0.0,
+   "nonfoot_ground_frac": 0.0,
+   "self_contact_pairs": []
+  },
+  {
+   "command": [
+    0.7,
+    0.4,
+    0.0
+   ],
+   "mean_velocity": [
+    0.643,
+    0.393,
+    0.035
+   ],
+   "mean_abs_error": [
+    0.069,
+    0.024,
+    0.041
+   ],
+   "mean_height": 0.226,
+   "min_height": 0.223,
+   "max_tilt_deg": 1.8,
+   "self_contact_frac": 0.0,
+   "nonfoot_ground_frac": 0.065,
+   "self_contact_pairs": []
+  }
+ ],
+ "note": "controller input = motor q, dq + command only; velocities here are MuJoCo ground truth for scoring"
+}
