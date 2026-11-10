@@ -1,0 +1,378 @@
+{
+ "sources": {
+  "usd": {
+   "repository": "https://huggingface.co/datasets/unitreerobotics/unitree_model",
+   "files": {
+    "go2.usd": "Go2/usd/go2.usd",
+    "go2_description_physics.usd": "Go2/usd/configuration/go2_description_physics.usd"
+   }
+  },
+  "config": {
+   "repository": "https://github.com/unitreerobotics/unitree_rl_lab",
+   "commit": "4960b84732b0c2ec593dccbfe963fda1bcd7b1e3",
+   "files": {
+    "unitree_rl_lab_unitree.py": "source/unitree_rl_lab/unitree_rl_lab/assets/robots/unitree.py",
+    "unitree_actuators.py": "source/unitree_rl_lab/unitree_rl_lab/assets/robots/unitree_actuators.py"
+   }
+  },
+  "downloaded": {
+   "go2.usd": {
+    "size": 1601,
+    "sha256": "fd3c8c23c97cea3208fae1ab5eeacba4ffa616fe5f1397be6c7edf4feb93f180",
+    "git_blob_sha1": "deb1f4a77360157dbf02acefd1cee0b3c31657f6"
+   },
+   "go2_description_physics.usd": {
+    "size": 6829,
+    "sha256": "43800f436b3533c869f0b7774e5c70bc4291579df70a62263f808fb1a8f05505",
+    "git_blob_sha1": "f83846390442d9de59cdb4ed1b71758c1b81ded3"
+   },
+   "unitree_rl_lab_unitree.py": {
+    "size": 24164,
+    "sha256": "5bb4d9b8cabfde167b0f905d0cfa63a2d8a6ab0209077c4885997edbc25c6a62",
+    "git_blob_sha1": "e78413aa562a90370e2375c7e66e5371df84a38e"
+   },
+   "unitree_actuators.py": {
+    "size": 6483,
+    "sha256": "96fa850770b45bd17fa2465e7b9a9e042163e767e948c83e6dd583b47afd0b58",
+    "git_blob_sha1": "efe781d52cec9048719a078196de7a7c9ffdcaca"
+   }
+  }
+ },
+ "usd_joints": {
+  "FL_hip_joint": {
+   "axis": "X",
+   "lower_deg": -60.0001335144043,
+   "upper_deg": 60.0001335144043,
+   "lower": -1.0472,
+   "upper": 1.0472,
+   "effort": 23.7,
+   "velocity_deg_s": 1724.6029052734375,
+   "velocity": 30.1,
+   "parent_offset": [
+    0.19339999556541443,
+    0.04650000110268593,
+    0.0
+   ],
+   "usd_drive_stiffness": 79.61774444580078,
+   "usd_drive_damping": 0.03184709697961807,
+   "armature": null,
+   "joint_friction": null
+  },
+  "FL_thigh_joint": {
+   "axis": "Y",
+   "lower_deg": -90.00020599365234,
+   "upper_deg": 200.0023651123047,
+   "lower": -1.5708,
+   "upper": 3.4907,
+   "effort": 23.7,
+   "velocity_deg_s": 1724.6029052734375,
+   "velocity": 30.1,
+   "parent_offset": [
+    0.0,
+    0.09549999982118607,
+    0.0
+   ],
+   "usd_drive_stiffness": 31.21541404724121,
+   "usd_drive_damping": 0.012486166320741177,
+   "armature": null,
+   "joint_friction": null
+  },
+  "FL_calf_joint": {
+   "axis": "Y",
+   "lower_deg": -155.9992218017578,
+   "upper_deg": -48.00010681152344,
+   "lower": -2.7227,
+   "upper": -0.83776,
+   "effort": 45.43,
+   "velocity_deg_s": 899.543701171875,
+   "velocity": 15.7,
+   "parent_offset": [
+    0.0,
+    0.0,
+    -0.21299999952316284
+   ],
+   "usd_drive_stiffness": 21.367918014526367,
+   "usd_drive_damping": 0.008547167293727398,
+   "armature": null,
+   "joint_friction": null
+  },
+  "FR_hip_joint": {
+   "axis": "X",
+   "lower_deg": -60.0001335144043,
+   "upper_deg": 60.0001335144043,
+   "lower": -1.0472,
+   "upper": 1.0472,
+   "effort": 23.7,
+   "velocity_deg_s": 1724.6029052734375,
+   "velocity": 30.1,
+   "parent_offset": [
+    0.19339999556541443,
+    -0.04650000110268593,
+    0.0
+   ],
+   "usd_drive_stiffness": 79.62061309814453,
+   "usd_drive_damping": 0.03184824436903,
+   "armature": null,
+   "joint_friction": null
+  },
+  "FR_thigh_joint": {
+   "axis": "Y",
+   "lower_deg": -90.00020599365234,
+   "upper_deg": 200.0023651123047,
+   "lower": -1.5708,
+   "upper": 3.4907,
+   "effort": 23.7,
+   "velocity_deg_s": 1724.6029052734375,
+   "velocity": 30.1,
+   "parent_offset": [
+    0.0,
+    -0.09549999982118607,
+    0.0
+   ],
+   "usd_drive_stiffness": 31.215927124023438,
+   "usd_drive_damping": 0.012486371211707592,
+   "armature": null,
+   "joint_friction": null
+  },
+  "FR_calf_joint": {
+   "axis": "Y",
+   "lower_deg": -155.9992218017578,
+   "upper_deg": -48.00010681152344,
+   "lower": -2.7227,
+   "upper": -0.83776,
+   "effort": 45.43,
+   "velocity_deg_s": 899.543701171875,
+   "velocity": 15.7,
+   "parent_offset": [
+    0.0,
+    0.0,
+    -0.21299999952316284
+   ],
+   "usd_drive_stiffness": 21.36797523498535,
+   "usd_drive_damping": 0.008547189645469189,
+   "armature": null,
+   "joint_friction": null
+  },
+  "RL_hip_joint": {
+   "axis": "X",
+   "lower_deg": -60.0001335144043,
+   "upper_deg": 60.0001335144043,
+   "lower": -1.0472,
+   "upper": 1.0472,
+   "effort": 23.7,
+   "velocity_deg_s": 1724.6029052734375,
+   "velocity": 30.1,
+   "parent_offset": [
+    -0.19339999556541443,
+    0.04650000110268593,
+    0.0
+   ],
+   "usd_drive_stiffness": 87.3094482421875,
+   "usd_drive_damping": 0.03492378070950508,
+   "armature": null,
+   "joint_friction": null
+  },
+  "RL_thigh_joint": {
+   "axis": "Y",
+   "lower_deg": -30.00006675720215,
+   "upper_deg": 260.00250244140625,
+   "lower": -0.5236,
+   "upper": 4.5379,
+   "effort": 23.7,
+   "velocity_deg_s": 1724.6029052734375,
+   "velocity": 30.1,
+   "parent_offset": [
+    0.0,
+    0.09549999982118607,
+    0.0
+   ],
+   "usd_drive_stiffness": 31.735233306884766,
+   "usd_drive_damping": 0.012694093398749828,
+   "armature": null,
+   "joint_friction": null
+  },
+  "RL_calf_joint": {
+   "axis": "Y",
+   "lower_deg": -155.9992218017578,
+   "upper_deg": -48.00010681152344,
+   "lower": -2.7227,
+   "upper": -0.83776,
+   "effort": 45.43,
+   "velocity_deg_s": 899.543701171875,
+   "velocity": 15.7,
+   "parent_offset": [
+    0.0,
+    0.0,
+    -0.21299999952316284
+   ],
+   "usd_drive_stiffness": 21.447595596313477,
+   "usd_drive_damping": 0.008579038083553314,
+   "armature": null,
+   "joint_friction": null
+  },
+  "RR_hip_joint": {
+   "axis": "X",
+   "lower_deg": -60.0001335144043,
+   "upper_deg": 60.0001335144043,
+   "lower": -1.0472,
+   "upper": 1.0472,
+   "effort": 23.7,
+   "velocity_deg_s": 1724.6029052734375,
+   "velocity": 30.1,
+   "parent_offset": [
+    -0.19339999556541443,
+    -0.04650000110268593,
+    0.0
+   ],
+   "usd_drive_stiffness": 87.30767822265625,
+   "usd_drive_damping": 0.03492307290434837,
+   "armature": null,
+   "joint_friction": null
+  },
+  "RR_thigh_joint": {
+   "axis": "Y",
+   "lower_deg": -30.00006675720215,
+   "upper_deg": 260.00250244140625,
+   "lower": -0.5236,
+   "upper": 4.5379,
+   "effort": 23.7,
+   "velocity_deg_s": 1724.6029052734375,
+   "velocity": 30.1,
+   "parent_offset": [
+    0.0,
+    -0.09549999982118607,
+    0.0
+   ],
+   "usd_drive_stiffness": 31.734899520874023,
+   "usd_drive_damping": 0.012693959288299084,
+   "armature": null,
+   "joint_friction": null
+  },
+  "RR_calf_joint": {
+   "axis": "Y",
+   "lower_deg": -155.9992218017578,
+   "upper_deg": -48.00010681152344,
+   "lower": -2.7227,
+   "upper": -0.83776,
+   "effort": 45.43,
+   "velocity_deg_s": 899.543701171875,
+   "velocity": 15.7,
+   "parent_offset": [
+    0.0,
+    0.0,
+    -0.21299999952316284
+   ],
+   "usd_drive_stiffness": 21.447572708129883,
+   "usd_drive_damping": 0.008579028770327568,
+   "armature": null,
+   "joint_friction": null
+  }
+ },
+ "usd_articulation": {
+  "enabledSelfCollisions": true,
+  "solverPositionIterationCount": 32,
+  "solverVelocityIterationCount": 1
+ },
+ "isaaclab_config": {
+  "UNITREE_GO2_CFG": {
+   "line": 95,
+   "value": {
+    "__call__": "UnitreeArticulationCfg",
+    "spawn": {
+     "__call__": "UnitreeUsdFileCfg",
+     "usd_path": "f\"{UNITREE_MODEL_DIR}/Go2/usd/go2.usd\""
+    },
+    "init_state": {
+     "__call__": "ArticulationCfg.InitialStateCfg",
+     "pos": [
+      0.0,
+      0.0,
+      0.4
+     ],
+     "joint_pos": {
+      ".*R_hip_joint": -0.1,
+      ".*L_hip_joint": 0.1,
+      "F[L,R]_thigh_joint": 0.8,
+      "R[L,R]_thigh_joint": 1.0,
+      ".*_calf_joint": -1.5
+     },
+     "joint_vel": {
+      ".*": 0.0
+     }
+    },
+    "actuators": {
+     "GO2HV": {
+      "__call__": "unitree_actuators.UnitreeActuatorCfg_Go2HV",
+      "joint_names_expr": [
+       ".*"
+      ],
+      "stiffness": 25.0,
+      "damping": 0.5,
+      "friction": 0.01
+     }
+    },
+    "joint_sdk_names": [
+     "FR_hip_joint",
+     "FR_thigh_joint",
+     "FR_calf_joint",
+     "FL_hip_joint",
+     "FL_thigh_joint",
+     "FL_calf_joint",
+     "RR_hip_joint",
+     "RR_thigh_joint",
+     "RR_calf_joint",
+     "RL_hip_joint",
+     "RL_thigh_joint",
+     "RL_calf_joint"
+    ]
+   }
+  },
+  "UnitreeArticulationCfg": {
+   "bases": [
+    "ArticulationCfg"
+   ],
+   "line": 25,
+   "fields": {
+    "joint_sdk_names": null,
+    "soft_joint_pos_limit_factor": 0.9
+   }
+  },
+  "UnitreeUsdFileCfg": {
+   "bases": [
+    "sim_utils.UsdFileCfg"
+   ],
+   "line": 34,
+   "fields": {
+    "activate_contact_sensors": true,
+    "rigid_props": {
+     "__call__": "sim_utils.RigidBodyPropertiesCfg",
+     "disable_gravity": false,
+     "retain_accelerations": false,
+     "linear_damping": 0.0,
+     "angular_damping": 0.0,
+     "max_linear_velocity": 1000.0,
+     "max_angular_velocity": 1000.0,
+     "max_depenetration_velocity": 1.0
+    },
+    "articulation_props": {
+     "__call__": "sim_utils.ArticulationRootPropertiesCfg",
+     "enabled_self_collisions": true,
+     "solver_position_iteration_count": 8,
+     "solver_velocity_iteration_count": 4
+    }
+   }
+  },
+  "UnitreeActuatorCfg_Go2HV": {
+   "bases": [
+    "UnitreeActuatorCfg"
+   ],
+   "line": 142,
+   "fields": {
+    "X1": 13.5,
+    "X2": 30,
+    "Y1": 20.2,
+    "Y2": 23.4
+   }
+  }
+ }
+}

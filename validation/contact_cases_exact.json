@@ -1,0 +1,941 @@
+[
+ {
+  "leg": "FL",
+  "pose": {
+   "hip": 0.1,
+   "thigh": 1.25,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "exact": {
+   "trunk|thigh": {
+    "volume_db": 0,
+    "items": []
+   },
+   "trunk|calf": {
+    "volume_db": 0,
+    "items": []
+   },
+   "hip|calf": {
+    "volume_db": 0,
+    "items": []
+   }
+  }
+ },
+ {
+  "leg": "FL",
+  "pose": {
+   "hip": 0.1,
+   "thigh": 1.3,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "exact": {
+   "trunk|thigh": {
+    "volume_db": 0,
+    "items": []
+   },
+   "trunk|calf": {
+    "volume_db": 0,
+    "items": []
+   },
+   "hip|calf": {
+    "volume_db": 0,
+    "items": []
+   }
+  }
+ },
+ {
+  "leg": "FL",
+  "pose": {
+   "hip": 0.1,
+   "thigh": 1.35,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "exact": {
+   "trunk|thigh": {
+    "volume_db": 0,
+    "items": []
+   },
+   "trunk|calf": {
+    "volume_db": 0,
+    "items": []
+   },
+   "hip|calf": {
+    "volume_db": 0,
+    "items": []
+   }
+  }
+ },
+ {
+  "leg": "FL",
+  "pose": {
+   "hip": 0.1,
+   "thigh": 1.4,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "exact": {
+   "trunk|thigh": {
+    "volume_db": 0,
+    "items": []
+   },
+   "trunk|calf": {
+    "volume_db": 0,
+    "items": []
+   },
+   "hip|calf": {
+    "volume_db": 0,
+    "items": []
+   }
+  }
+ },
+ {
+  "leg": "FL",
+  "pose": {
+   "hip": 0.1,
+   "thigh": 1.45,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "exact": {
+   "trunk|thigh": {
+    "volume_db": 0.016004271934904238,
+    "items": [
+     [
+      "V1_G2_pipe_hole_261107_1:2",
+      "V1_G1_윗링크-왼_261103:1",
+      0.016004271934904238
+     ]
+    ]
+   },
+   "trunk|calf": {
+    "volume_db": 0,
+    "items": []
+   },
+   "hip|calf": {
+    "volume_db": 0,
+    "items": []
+   }
+  }
+ },
+ {
+  "leg": "FL",
+  "pose": {
+   "hip": 0.1,
+   "thigh": 1.6,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "exact": {
+   "trunk|thigh": {
+    "volume_db": 2.6784441680340967,
+    "items": [
+     [
+      "V1_G2_pipe_hole_261107_1:2",
+      "V1_G1_윗링크-왼_261103:1",
+      2.6784441680340967
+     ]
+    ]
+   },
+   "trunk|calf": {
+    "volume_db": 0,
+    "items": []
+   },
+   "hip|calf": {
+    "volume_db": 0,
+    "items": []
+   }
+  }
+ },
+ {
+  "leg": "FL",
+  "pose": {
+   "hip": 0.1,
+   "thigh": 2.0,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "exact": {
+   "trunk|thigh": {
+    "volume_db": 7.141455021589147,
+    "items": [
+     [
+      "V1_G2_pipe_hole_261107_1:2",
+      "숄더M8-L45:2",
+      0.18292050275789118
+     ],
+     [
+      "V1_G2_pipe_hole_261107_1:2",
+      "V1_G1_윗링크-왼_261103:1",
+      6.9585345188312555
+     ]
+    ]
+   },
+   "trunk|calf": {
+    "volume_db": 0,
+    "items": []
+   },
+   "hip|calf": {
+    "volume_db": 0,
+    "items": []
+   }
+  }
+ },
+ {
+  "leg": "FL",
+  "pose": {
+   "hip": 0.1,
+   "thigh": 2.6,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "exact": {
+   "trunk|thigh": {
+    "volume_db": 0,
+    "items": []
+   },
+   "trunk|calf": {
+    "volume_db": 0,
+    "items": []
+   },
+   "hip|calf": {
+    "volume_db": 0,
+    "items": []
+   }
+  }
+ },
+ {
+  "leg": "FL",
+  "pose": {
+   "hip": 0.1,
+   "thigh": 2.65,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "exact": {
+   "trunk|thigh": {
+    "volume_db": 0,
+    "items": []
+   },
+   "trunk|calf": {
+    "volume_db": 0,
+    "items": []
+   },
+   "hip|calf": {
+    "volume_db": 0,
+    "items": []
+   }
+  }
+ },
+ {
+  "leg": "FL",
+  "pose": {
+   "hip": 0.1,
+   "thigh": 2.7,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "exact": {
+   "trunk|thigh": {
+    "volume_db": 0,
+    "items": []
+   },
+   "trunk|calf": {
+    "volume_db": 0,
+    "items": []
+   },
+   "hip|calf": {
+    "volume_db": 0,
+    "items": []
+   }
+  }
+ },
+ {
+  "leg": "FL",
+  "pose": {
+   "hip": 0.1,
+   "thigh": 2.8,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "exact": {
+   "trunk|thigh": {
+    "volume_db": 0,
+    "items": []
+   },
+   "trunk|calf": {
+    "volume_db": 0,
+    "items": []
+   },
+   "hip|calf": {
+    "volume_db": 0,
+    "items": []
+   }
+  }
+ },
+ {
+  "leg": "FL",
+  "pose": {
+   "hip": -1.0472,
+   "thigh": 0.8,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "exact": {
+   "trunk|thigh": {
+    "volume_db": 1.1819945280627848,
+    "items": [
+     [
+      "V1_G2_pipe_hole_261107_1:2",
+      "V1_G1_윗링크-왼_261103:1",
+      1.1819945280627848
+     ]
+    ]
+   },
+   "trunk|calf": {
+    "volume_db": 0,
+    "items": []
+   },
+   "hip|calf": {
+    "volume_db": 0,
+    "items": []
+   }
+  }
+ },
+ {
+  "leg": "FL",
+  "pose": {
+   "hip": -0.95,
+   "thigh": 0.8,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "exact": {
+   "trunk|thigh": {
+    "volume_db": 0,
+    "items": []
+   },
+   "trunk|calf": {
+    "volume_db": 0,
+    "items": []
+   },
+   "hip|calf": {
+    "volume_db": 0,
+    "items": []
+   }
+  }
+ },
+ {
+  "leg": "FL",
+  "pose": {
+   "hip": -0.85,
+   "thigh": 0.8,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "exact": {
+   "trunk|thigh": {
+    "volume_db": 0,
+    "items": []
+   },
+   "trunk|calf": {
+    "volume_db": 0,
+    "items": []
+   },
+   "hip|calf": {
+    "volume_db": 0,
+    "items": []
+   }
+  }
+ },
+ {
+  "leg": "FL",
+  "pose": {
+   "hip": 0.85,
+   "thigh": 0.8,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "exact": {
+   "trunk|thigh": {
+    "volume_db": 2.3506099946620953,
+    "items": [
+     [
+      "V1_G2_pipe_hole_261107_1:2",
+      "V1_G1_윗링크-왼_261103:1",
+      2.3506099946620953
+     ]
+    ]
+   },
+   "trunk|calf": {
+    "volume_db": 0,
+    "items": []
+   },
+   "hip|calf": {
+    "volume_db": 0,
+    "items": []
+   }
+  }
+ },
+ {
+  "leg": "FL",
+  "pose": {
+   "hip": 0.95,
+   "thigh": 0.8,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "exact": {
+   "trunk|thigh": {
+    "volume_db": 4.600070573434659,
+    "items": [
+     [
+      "파이프:4",
+      "V1_G1_윗링크-왼_261103:1",
+      0.03318042279488298
+     ],
+     [
+      "V1_G2_pipe_hole_261107_1:2",
+      "V1_G1_윗링크-왼_261103:1",
+      4.566890150639776
+     ]
+    ]
+   },
+   "trunk|calf": {
+    "volume_db": 0,
+    "items": []
+   },
+   "hip|calf": {
+    "volume_db": 0,
+    "items": []
+   }
+  }
+ },
+ {
+  "leg": "FL",
+  "pose": {
+   "hip": 1.0472,
+   "thigh": 0.8,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "exact": {
+   "trunk|thigh": {
+    "volume_db": 6.7759985664331,
+    "items": [
+     [
+      "파이프:4",
+      "V1_G1_윗링크-왼_261103:1",
+      0.10775177040127804
+     ],
+     [
+      "V1_G2_pipe_hole_261107_1:2",
+      "V1_G1_윗링크-왼_261103:1",
+      6.668246796031822
+     ]
+    ]
+   },
+   "trunk|calf": {
+    "volume_db": 0,
+    "items": []
+   },
+   "hip|calf": {
+    "volume_db": 0,
+    "items": []
+   }
+  }
+ },
+ {
+  "leg": "RL",
+  "pose": {
+   "hip": 0.1,
+   "thigh": 3.4,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "exact": {
+   "trunk|thigh": {
+    "volume_db": 0,
+    "items": []
+   },
+   "trunk|calf": {
+    "volume_db": 0,
+    "items": []
+   },
+   "hip|calf": {
+    "volume_db": 0,
+    "items": []
+   }
+  }
+ },
+ {
+  "leg": "RL",
+  "pose": {
+   "hip": 0.1,
+   "thigh": 3.5,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "exact": {
+   "trunk|thigh": {
+    "volume_db": 0,
+    "items": []
+   },
+   "trunk|calf": {
+    "volume_db": 0,
+    "items": []
+   },
+   "hip|calf": {
+    "volume_db": 0,
+    "items": []
+   }
+  }
+ },
+ {
+  "leg": "RL",
+  "pose": {
+   "hip": 0.1,
+   "thigh": 3.55,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "exact": {
+   "trunk|thigh": {
+    "volume_db": 0,
+    "items": []
+   },
+   "trunk|calf": {
+    "volume_db": 0,
+    "items": []
+   },
+   "hip|calf": {
+    "volume_db": 0,
+    "items": []
+   }
+  }
+ },
+ {
+  "leg": "RL",
+  "pose": {
+   "hip": 0.1,
+   "thigh": 3.6,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "exact": {
+   "trunk|thigh": {
+    "volume_db": 0,
+    "items": []
+   },
+   "trunk|calf": {
+    "volume_db": 0,
+    "items": []
+   },
+   "hip|calf": {
+    "volume_db": 0,
+    "items": []
+   }
+  }
+ },
+ {
+  "leg": "RL",
+  "pose": {
+   "hip": 0.1,
+   "thigh": 3.7,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "exact": {
+   "trunk|thigh": {
+    "volume_db": 0.5639071703000217,
+    "items": [
+     [
+      "V1_G2_pipe_hole_261107_1:3",
+      "V1_G1_윗링크-왼_261103:1",
+      0.5639071703000217
+     ]
+    ]
+   },
+   "trunk|calf": {
+    "volume_db": 0,
+    "items": []
+   },
+   "hip|calf": {
+    "volume_db": 0,
+    "items": []
+   }
+  }
+ },
+ {
+  "leg": "RL",
+  "pose": {
+   "hip": 0.1,
+   "thigh": 4.0,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "exact": {
+   "trunk|thigh": {
+    "volume_db": 6.202745603375781,
+    "items": [
+     [
+      "V1_G2_pipe_hole_261107_1:3",
+      "V1_G1_윗링크-왼_261103:1",
+      6.202745603375781
+     ]
+    ]
+   },
+   "trunk|calf": {
+    "volume_db": 0,
+    "items": []
+   },
+   "hip|calf": {
+    "volume_db": 0,
+    "items": []
+   }
+  }
+ },
+ {
+  "leg": "RL",
+  "pose": {
+   "hip": 0.1,
+   "thigh": 4.5379,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "exact": {
+   "trunk|thigh": {
+    "volume_db": 2.382845587427384,
+    "items": [
+     [
+      "V1_G2_pipe_hole_261107_1:3",
+      "V1_G1_윗링크-왼_261103:1",
+      2.382845587427384
+     ]
+    ]
+   },
+   "trunk|calf": {
+    "volume_db": 0,
+    "items": []
+   },
+   "hip|calf": {
+    "volume_db": 0,
+    "items": []
+   }
+  }
+ }
+]

@@ -1,0 +1,586 @@
+[
+ {
+  "leg": "FL",
+  "pose": {
+   "hip": 0.1,
+   "thigh": 1.25,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "hull_min_dist_m": {}
+ },
+ {
+  "leg": "FL",
+  "pose": {
+   "hip": 0.1,
+   "thigh": 1.3,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "hull_min_dist_m": {}
+ },
+ {
+  "leg": "FL",
+  "pose": {
+   "hip": 0.1,
+   "thigh": 1.35,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "hull_min_dist_m": {
+   "trunk|thigh": -0.0006801817268019275
+  }
+ },
+ {
+  "leg": "FL",
+  "pose": {
+   "hip": 0.1,
+   "thigh": 1.4,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "hull_min_dist_m": {
+   "trunk|thigh": -0.0020520971350703487
+  }
+ },
+ {
+  "leg": "FL",
+  "pose": {
+   "hip": 0.1,
+   "thigh": 1.45,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "hull_min_dist_m": {
+   "trunk|thigh": -0.003440263666251073
+  }
+ },
+ {
+  "leg": "FL",
+  "pose": {
+   "hip": 0.1,
+   "thigh": 1.6,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "hull_min_dist_m": {
+   "trunk|thigh": -0.006845234987992058
+  }
+ },
+ {
+  "leg": "FL",
+  "pose": {
+   "hip": 0.1,
+   "thigh": 2.0,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "hull_min_dist_m": {
+   "trunk|thigh": -0.007407944923789205
+  }
+ },
+ {
+  "leg": "FL",
+  "pose": {
+   "hip": 0.1,
+   "thigh": 2.6,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "hull_min_dist_m": {
+   "trunk|thigh": -0.005817445525629696
+  }
+ },
+ {
+  "leg": "FL",
+  "pose": {
+   "hip": 0.1,
+   "thigh": 2.65,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "hull_min_dist_m": {
+   "trunk|thigh": -0.0038438576238500827
+  }
+ },
+ {
+  "leg": "FL",
+  "pose": {
+   "hip": 0.1,
+   "thigh": 2.7,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "hull_min_dist_m": {
+   "trunk|thigh": -0.0013130285495579412
+  }
+ },
+ {
+  "leg": "FL",
+  "pose": {
+   "hip": 0.1,
+   "thigh": 2.8,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "hull_min_dist_m": {}
+ },
+ {
+  "leg": "FL",
+  "pose": {
+   "hip": -1.0472,
+   "thigh": 0.8,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "hull_min_dist_m": {
+   "trunk|thigh": -0.0023593794774653906
+  }
+ },
+ {
+  "leg": "FL",
+  "pose": {
+   "hip": -0.95,
+   "thigh": 0.8,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "hull_min_dist_m": {}
+ },
+ {
+  "leg": "FL",
+  "pose": {
+   "hip": -0.85,
+   "thigh": 0.8,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "hull_min_dist_m": {}
+ },
+ {
+  "leg": "FL",
+  "pose": {
+   "hip": 0.85,
+   "thigh": 0.8,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "hull_min_dist_m": {
+   "trunk|thigh": -0.01354703020990741
+  }
+ },
+ {
+  "leg": "FL",
+  "pose": {
+   "hip": 0.95,
+   "thigh": 0.8,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "hull_min_dist_m": {
+   "trunk|thigh": -0.017211615526605658
+  }
+ },
+ {
+  "leg": "FL",
+  "pose": {
+   "hip": 1.0472,
+   "thigh": 0.8,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "hull_min_dist_m": {
+   "trunk|thigh": -0.019859257208869108
+  }
+ },
+ {
+  "leg": "RL",
+  "pose": {
+   "hip": 0.1,
+   "thigh": 3.4,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "hull_min_dist_m": {}
+ },
+ {
+  "leg": "RL",
+  "pose": {
+   "hip": 0.1,
+   "thigh": 3.5,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "hull_min_dist_m": {}
+ },
+ {
+  "leg": "RL",
+  "pose": {
+   "hip": 0.1,
+   "thigh": 3.55,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "hull_min_dist_m": {}
+ },
+ {
+  "leg": "RL",
+  "pose": {
+   "hip": 0.1,
+   "thigh": 3.6,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "hull_min_dist_m": {
+   "trunk|thigh": -0.0022040411625403743
+  }
+ },
+ {
+  "leg": "RL",
+  "pose": {
+   "hip": 0.1,
+   "thigh": 3.7,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "hull_min_dist_m": {
+   "trunk|thigh": -0.006458825066257392
+  }
+ },
+ {
+  "leg": "RL",
+  "pose": {
+   "hip": 0.1,
+   "thigh": 4.0,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "hull_min_dist_m": {
+   "trunk|thigh": -0.00739354387429465
+  }
+ },
+ {
+  "leg": "RL",
+  "pose": {
+   "hip": 0.1,
+   "thigh": 4.5379,
+   "calf": -1.5
+  },
+  "pairs": [
+   [
+    "trunk",
+    "thigh"
+   ],
+   [
+    "trunk",
+    "calf"
+   ],
+   [
+    "hip",
+    "calf"
+   ]
+  ],
+  "hull_min_dist_m": {
+   "trunk|thigh": -0.00740795524386232
+  }
+ }
+]

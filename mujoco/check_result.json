@@ -1,0 +1,414 @@
+{
+ "mujoco_version": "3.17.0",
+ "timestep": 0.002,
+ "rows": [
+  {
+   "item": "bodies = URDF links",
+   "expected": [
+    "FL_calf",
+    "FL_foot",
+    "FL_hip",
+    "FL_thigh",
+    "FR_calf",
+    "FR_foot",
+    "FR_hip",
+    "FR_thigh",
+    "RL_calf",
+    "RL_foot",
+    "RL_hip",
+    "RL_thigh",
+    "RR_calf",
+    "RR_foot",
+    "RR_hip",
+    "RR_thigh",
+    "base"
+   ],
+   "measured": [
+    "FL_calf",
+    "FL_foot",
+    "FL_hip",
+    "FL_thigh",
+    "FR_calf",
+    "FR_foot",
+    "FR_hip",
+    "FR_thigh",
+    "RL_calf",
+    "RL_foot",
+    "RL_hip",
+    "RL_thigh",
+    "RR_calf",
+    "RR_foot",
+    "RR_hip",
+    "RR_thigh",
+    "base"
+   ],
+   "pass": true
+  },
+  {
+   "item": "body masses (max relative error)",
+   "expected": 0,
+   "measured": 4.05206181435789e-12,
+   "pass": true
+  },
+  {
+   "item": "body centres of mass (max error m)",
+   "expected": 0,
+   "measured": 3.4745306566630316e-14,
+   "pass": true
+  },
+  {
+   "item": "principal inertia (max relative error)",
+   "expected": 0,
+   "measured": 2.4336506602210142e-12,
+   "pass": true
+  },
+  {
+   "item": "total mass kg",
+   "expected": 12.32860846583946,
+   "measured": 12.32860846582,
+   "pass": true
+  },
+  {
+   "item": "joint ranges = Go2 limits (max error rad)",
+   "expected": 0,
+   "measured": 0.0,
+   "pass": true
+  },
+  {
+   "item": "joint axes hip x, thigh/calf y",
+   "expected": 0,
+   "measured": 0.0,
+   "pass": true
+  },
+  {
+   "item": "all leg joints limited",
+   "expected": true,
+   "measured": true,
+   "pass": true
+  },
+  {
+   "item": "every link has a collision geom",
+   "expected": true,
+   "measured": true,
+   "pass": true
+  },
+  {
+   "item": "all geoms collide (contype/conaffinity set)",
+   "expected": true,
+   "measured": true,
+   "pass": true
+  },
+  {
+   "item": "no self-contact at init pose",
+   "expected": [],
+   "measured": [],
+   "pass": true
+  },
+  {
+   "item": "no self-contact at cad pose",
+   "expected": [],
+   "measured": [],
+   "pass": true
+  },
+  {
+   "item": "simulation stays finite",
+   "expected": true,
+   "measured": true,
+   "pass": true
+  },
+  {
+   "item": "standing: base tilt deg after settling",
+   "expected": "< 5",
+   "measured": 1.6379899951296801,
+   "pass": true
+  },
+  {
+   "item": "standing: base height change in the last 2 s (m)",
+   "expected": "< 0.001",
+   "measured": 0.0007709533332951879,
+   "pass": true
+  },
+  {
+   "item": "standing: only feet touch the floor",
+   "expected": [
+    "FL_foot",
+    "FR_foot",
+    "RL_foot",
+    "RR_foot"
+   ],
+   "measured": [
+    "FL_foot",
+    "FR_foot",
+    "RL_foot",
+    "RR_foot"
+   ],
+   "pass": true
+  },
+  {
+   "item": "standing: no self-penetration",
+   "expected": [],
+   "measured": [],
+   "pass": true
+  },
+  {
+   "item": "saved scene reloads with the same bodies and mass",
+   "expected": [
+    18,
+    12.32860846582
+   ],
+   "measured": [
+    18,
+    12.328598000000001
+   ],
+   "pass": true
+  }
+ ],
+ "pose_contacts": {
+  "init": [],
+  "cad": [],
+  "zero": []
+ },
+ "joint_sweep_contacts": {
+  "FL_hip_joint": {
+   "FL_thigh|base": [
+    -1.0472,
+    1.0472
+   ],
+   "FL_calf|FR_calf": [
+    -1.0472,
+    -0.9076
+   ],
+   "FL_foot|FR_calf": [
+    -1.0472,
+    -0.8727
+   ],
+   "FL_foot|FR_foot": [
+    -0.9774,
+    -0.9076
+   ]
+  },
+  "FL_thigh_joint": {
+   "FL_thigh|base": [
+    1.3817,
+    2.6471
+   ]
+  },
+  "FL_calf_joint": {},
+  "FR_hip_joint": {
+   "FR_thigh|base": [
+    -1.0472,
+    1.0472
+   ],
+   "FL_calf|FR_foot": [
+    0.8727,
+    1.0472
+   ],
+   "FL_calf|FR_calf": [
+    0.9076,
+    1.0472
+   ],
+   "FL_foot|FR_foot": [
+    0.9076,
+    0.9774
+   ]
+  },
+  "FR_thigh_joint": {
+   "FR_thigh|base": [
+    1.3817,
+    2.6471
+   ]
+  },
+  "FR_calf_joint": {},
+  "RL_hip_joint": {
+   "RL_calf|RR_calf": [
+    -1.0472,
+    -0.9425
+   ],
+   "RL_foot|RR_calf": [
+    -1.0472,
+    -0.9076
+   ],
+   "RL_foot|RR_foot": [
+    -0.9774,
+    -0.9425
+   ]
+  },
+  "RL_thigh_joint": {
+   "FL_thigh|RL_foot": [
+    -0.5236,
+    -0.2705
+   ],
+   "FL_calf|RL_foot": [
+    -0.4392,
+    -0.2705
+   ],
+   "RL_thigh|base": [
+    3.61,
+    4.5379
+   ]
+  },
+  "RL_calf_joint": {},
+  "RR_hip_joint": {
+   "RL_calf|RR_foot": [
+    0.9076,
+    1.0472
+   ],
+   "RL_calf|RR_calf": [
+    0.9425,
+    1.0472
+   ],
+   "RL_foot|RR_foot": [
+    0.9425,
+    0.9774
+   ]
+  },
+  "RR_thigh_joint": {
+   "FR_thigh|RR_foot": [
+    -0.5236,
+    -0.2705
+   ],
+   "FR_calf|RR_foot": [
+    -0.4392,
+    -0.2705
+   ],
+   "RR_thigh|base": [
+    3.61,
+    4.5379
+   ]
+  },
+  "RR_calf_joint": {}
+ },
+ "standing": {
+  "final_base_height_m": 0.29685403573645675,
+  "tilt_deg": 1.6379899951296801,
+  "max_abs_torque": 11.681313608518995,
+  "foot_contacts": [
+   "FL_foot",
+   "FR_foot",
+   "RL_foot",
+   "RR_foot"
+  ],
+  "final_qpos": [
+   -0.058106831021176746,
+   1.2161502891740522e-06,
+   0.29685403573645675,
+   0.9998978402435343,
+   -2.905459063224093e-07,
+   -0.014293672495997304,
+   1.675654371201039e-06,
+   0.07680194694172884,
+   0.8171229842843921,
+   -1.6171601843190269,
+   -0.07680115204904794,
+   0.8171244429608757,
+   -1.617159567547908,
+   0.10639597795603853,
+   0.9517883622703128,
+   -1.6814054782998005,
+   -0.10639691978722449,
+   0.9517907073169587,
+   -1.6814031360655703
+  ]
+ },
+ "geom_types": {
+  "world": [
+   "mjGEOM_PLANE"
+  ],
+  "base": [
+   "mjGEOM_MESH",
+   "mjGEOM_MESH",
+   "mjGEOM_MESH",
+   "mjGEOM_MESH",
+   "mjGEOM_MESH",
+   "mjGEOM_MESH",
+   "mjGEOM_MESH",
+   "mjGEOM_MESH",
+   "mjGEOM_MESH",
+   "mjGEOM_MESH"
+  ],
+  "FL_hip": [
+   "mjGEOM_MESH",
+   "mjGEOM_MESH",
+   "mjGEOM_MESH"
+  ],
+  "FL_thigh": [
+   "mjGEOM_MESH",
+   "mjGEOM_MESH",
+   "mjGEOM_MESH",
+   "mjGEOM_MESH",
+   "mjGEOM_MESH",
+   "mjGEOM_MESH",
+   "mjGEOM_MESH"
+  ],
+  "FL_calf": [
+   "mjGEOM_MESH",
+   "mjGEOM_MESH"
+  ],
+  "FL_foot": [
+   "mjGEOM_SPHERE"
+  ],
+  "FR_hip": [
+   "mjGEOM_MESH",
+   "mjGEOM_MESH",
+   "mjGEOM_MESH"
+  ],
+  "FR_thigh": [
+   "mjGEOM_MESH",
+   "mjGEOM_MESH",
+   "mjGEOM_MESH",
+   "mjGEOM_MESH",
+   "mjGEOM_MESH",
+   "mjGEOM_MESH",
+   "mjGEOM_MESH"
+  ],
+  "FR_calf": [
+   "mjGEOM_MESH",
+   "mjGEOM_MESH"
+  ],
+  "FR_foot": [
+   "mjGEOM_SPHERE"
+  ],
+  "RL_hip": [
+   "mjGEOM_MESH",
+   "mjGEOM_MESH",
+   "mjGEOM_MESH"
+  ],
+  "RL_thigh": [
+   "mjGEOM_MESH",
+   "mjGEOM_MESH",
+   "mjGEOM_MESH",
+   "mjGEOM_MESH",
+   "mjGEOM_MESH",
+   "mjGEOM_MESH",
+   "mjGEOM_MESH"
+  ],
+  "RL_calf": [
+   "mjGEOM_MESH",
+   "mjGEOM_MESH"
+  ],
+  "RL_foot": [
+   "mjGEOM_SPHERE"
+  ],
+  "RR_hip": [
+   "mjGEOM_MESH",
+   "mjGEOM_MESH",
+   "mjGEOM_MESH"
+  ],
+  "RR_thigh": [
+   "mjGEOM_MESH",
+   "mjGEOM_MESH",
+   "mjGEOM_MESH",
+   "mjGEOM_MESH",
+   "mjGEOM_MESH",
+   "mjGEOM_MESH",
+   "mjGEOM_MESH"
+  ],
+  "RR_calf": [
+   "mjGEOM_MESH",
+   "mjGEOM_MESH"
+  ],
+  "RR_foot": [
+   "mjGEOM_SPHERE"
+  ]
+ }
+}
